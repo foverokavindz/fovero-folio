@@ -5,7 +5,7 @@ import {
   Resume,
   Pricing,
   Portfolio,
-  home,
+  Home,
   Contact,
   Blog,
   About,
@@ -17,7 +17,7 @@ function App() {
     <>
       <Sidebar />
       <main className="main">
-        <home />
+        <Home />
         <About />
         <Services />
         <Resume />
