@@ -13,7 +13,22 @@ import {
 import './App.css';
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Sidebar />
+      <main className="main">
+        <home />
+        <About />
+        <Services />
+        <Resume />
+        <Portfolio />
+        <Pricing />
+        <Testimonials />
+        <Blog />
+        <Contact />
+      </main>
+    </>
+  );
 }
 
 export default App;
