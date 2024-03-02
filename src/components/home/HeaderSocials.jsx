@@ -21,12 +21,12 @@ const HeaderSocials = () => {
     <div className="home__socials">
       {socialLinks.map((link) => (
         <a
-          id={link.id}
+          key={link.id}
           href={link.link}
           className="home__social-link"
           target="_blank"
         >
-          <i class={link.icon}></i>
+          <i className={link.icon}></i>
         </a>
       ))}
     </div>
