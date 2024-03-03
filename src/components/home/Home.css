@@ -44,6 +44,7 @@
 
 .home__scroll-name {
   font-size: var(--small-font-size);
+  color: var(--title-color);
 }
 .mouse {
   border: 2px solid #454360;

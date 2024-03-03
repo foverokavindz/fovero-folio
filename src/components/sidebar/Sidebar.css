@@ -21,13 +21,19 @@
 
 .nav__link {
   font-size: 1.3rem;
-  color: var (--title-color);
+  color: var(--title-color);
   font-weight: var (--font-bold);
   transition: 0.3s;
 }
 
 .nav__link:hover {
+  color: hsl(43, 100%, 68%) !important;
+}
+.nav__link:active {
   color: hsl(43, 100%, 68%);
+}
+.nav__link:visited {
+  color: var(--title-color);
 }
 
 .copyright {
