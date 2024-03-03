@@ -1,6 +1,6 @@
 import React from 'react';
 import './Sidebar.css';
-import Logo from '../../assets/logo.svg';
+import Logo from '../../assets/logo.png';
 
 const navLinks = [
   { id: 1, link: '#home', icon: 'icon-home' },
@@ -16,7 +16,7 @@ const Sidebar = () => {
   return (
     <aside className="aside">
       <a href="#home" className="nav__logo">
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="" className="sidebar__logo" />
       </a>
 
       <nav className="nav">

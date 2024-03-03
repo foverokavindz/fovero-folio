@@ -36,3 +36,11 @@
   transform: rotate(-180deg);
   writing-mode: vertical-rl;
 }
+
+.sidebar__logo {
+  width: 100px;
+  height: auto;
+
+  background-size: cover;
+  background-position: center;
+}
