@@ -88,64 +88,105 @@
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
 }
 
 .shape {
   position: absolute;
 }
 
+@keyframes move {
+  from {
+    left: 50%;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .s1 {
+  animation: move 1s ease;
   left: 2%;
   top: 10%;
 }
 
 .s2 {
+  animation: move 1.3s ease;
   left: 18%;
   top: 30%;
 }
 
 .s3 {
+  animation: move 1.6s ease;
   left: 5%;
   bottom: 30%;
 }
 
 .s4 {
+  animation: move 1.9s ease;
   left: 2%;
   bottom: 10%;
 }
 
 .s5 {
+  animation: move 2.2s ease;
   left: 44%;
   top: 10%;
 }
 
 .s6 {
+  animation: move 2.5s ease;
   left: 36%;
   bottom: 10%;
 }
 
 .s7 {
+  animation: move 2.8s ease;
   top: 20%;
   right: 25%;
 }
 
 .s8 {
+  animation: move 3.1s ease;
   right: 24%;
   bottom: 20%;
 }
 
 .s9 {
+  animation: move 3.4s ease;
   right: 2%;
   top: 10%;
 }
 
 .s10 {
+  animation: move 3.7s ease;
   top: 45%;
   right: 11%;
 }
 
 .s11 {
+  animation: move 3.9s ease;
   right: 2%;
   bottom: 10%;
+}
+
+.shape:hover {
+  scale: 2;
+  transition: 1.5s;
+  animation: rotateImg 1.5s ease-in-out infinite;
+}
+
+@keyframes rotateImg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1795deg);
+  }
 }
