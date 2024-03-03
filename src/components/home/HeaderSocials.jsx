@@ -3,7 +3,7 @@ import React from 'react';
 const socialLinks = [
   {
     id: 1,
-    icon: 'fa-brands fa-instagram',
+    icon: 'fa-brands fa-linkedin',
     link: 'https://www.instagram.com/',
   },
   {
@@ -13,7 +13,7 @@ const socialLinks = [
   },
   { id: 3, icon: 'fa-brands fa-behance', link: 'https://www.behance.net/' },
   { id: 4, icon: 'fa-brands fa-facebook', link: 'https://dribbble.com/' },
-  { id: 5, icon: 'fa-brands fa-pinterest', link: 'https://www.pinterest.com/' },
+  { id: 5, icon: 'fa-brands fa-github', link: 'https://www.pinterest.com/' },
 ];
 
 const HeaderSocials = () => {
