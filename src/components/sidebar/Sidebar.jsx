@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css';
 import Logo from '../../assets/logo.png';
 
@@ -13,30 +13,43 @@ const navLinks = [
 ];
 
 const Sidebar = () => {
+  const [toggle, showMenu] = useState(false);
   return (
-    <aside className="aside">
-      <a href="#home" className="nav__logo">
-        <img src={Logo} alt="" className="sidebar__logo" />
-      </a>
+    <>
+      <aside
+        className={toggle ? 'aside show-menu' : 'aside'}
+        onClick={() => showMenu(!toggle)}
+      >
+        <a href="#home" className="nav__logo">
+          <img src={Logo} alt="" className="sidebar__logo" />
+        </a>
 
-      <nav className="nav">
-        <div className="nav__menu">
-          <ul className="nav__list">
-            {navLinks.map((link) => (
-              <li key={link.id} className="nav__item">
-                <a href={link.link} className="nav__link">
-                  <i className={link.icon}></i>
-                </a>
-              </li>
-            ))}
-          </ul>
+        <nav className="nav">
+          <div className="nav__menu">
+            <ul className="nav__list">
+              {navLinks.map((link) => (
+                <li key={link.id} className="nav__item">
+                  <a href={link.link} className="nav__link">
+                    <i className={link.icon}></i>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
+        <div className="nav__footer">
+          <span className="copyright">&copy; 2024 - 2025.</span>
         </div>
-      </nav>
+      </aside>
 
-      <div className="nav__footer">
-        <span className="copyright">&copy; 2024 - 2025.</span>
+      <div
+        className={toggle ? 'nav__toggle nav__toggle-open' : 'nav__toggle'}
+        onClick={() => showMenu(!toggle)}
+      >
+        <i className="icon-menu"></i>
       </div>
-    </aside>
+    </>
   );
 };
 

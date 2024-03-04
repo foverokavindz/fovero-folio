@@ -1,6 +1,7 @@
 .work__filters {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   column-gap: 1.875rem;
   margin-bottom: 2.5rem;
 }
@@ -109,4 +110,34 @@
 
 .fadeInUp {
   animation: fadeInUp 0.5s ease backwards;
+}
+
+@media screen and (max-width: 1024px) {
+  .work__filters {
+    justify-content: center;
+  }
+  .work__container {
+    grid-template-columns: repeat(2, 330px);
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work__container {
+    grid-template-columns: 310px;
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+
+  .work__filters {
+    justify-content: center;
+    row-gap: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .work__container {
+    grid-template-columns: 1fr;
+  }
 }
