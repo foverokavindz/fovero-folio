@@ -2,6 +2,7 @@ import React from 'react';
 import './About.css';
 import logo from '../../assets/avatar-2.svg';
 import AboutBox from './AboutBox';
+import Resume from '../../assets/mycv.pdf';
 
 const skillsList = [
   {
@@ -28,7 +29,7 @@ const About = () => {
               have rich experience in web site design and building and
               customization, also I am good at WordPress.
             </p>
-            <a href="" className="btn">
+            <a href={Resume} download="resume" className="btn">
               Download CV
             </a>
           </div>
