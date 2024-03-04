@@ -16,7 +16,7 @@
 }
 
 .services__card:nth-child(1) {
-  background-color: rgb(108, 108, 229);
+  background-color: #a2e3ff;
   box-shadow: 0px 5px 20px 0px rgba(108, 108, 229 / 50%);
 }
 
@@ -32,6 +32,7 @@
 
 .services__img {
   margin-bottom: 1.25rem;
+  height: 80px;
 }
 
 .services__title {
@@ -51,6 +52,15 @@
 .services__card:nth-child(2) .services__description {
   color: var(--text-color);
 }
+
+.services__card:nth-child(1) .services__title {
+  color: var(--title-color);
+}
+
+.services__card:nth-child(1) .services__description {
+  color: var(--text-color);
+}
+
 @media screen and (max-width: 1024px) {
   .services__container {
     grid-template-columns: repeat(2, 330px);

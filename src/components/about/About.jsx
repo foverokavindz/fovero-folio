@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import logo from '../../assets/avatar-2.svg';
+import logo from '../../assets/me.jpg';
 import AboutBox from './AboutBox';
 
 const skillsList = [
@@ -10,8 +10,8 @@ const skillsList = [
     class: 'development',
     number: '90%',
   },
-  { id: 2, name: 'UI/UX design', class: 'ui__design', number: '80%' },
-  { id: 3, name: 'Photography', class: 'photography', number: '60%' },
+  { id: 2, name: 'UI/UX design', class: 'ui__design', number: '70%' },
+  { id: 3, name: 'Wordpress', class: 'wordpress', number: '80%' },
 ];
 
 const About = () => {
@@ -24,9 +24,9 @@ const About = () => {
         <div className="about__data grid">
           <div className="about__info">
             <p className="about__description">
-              I am Kavinda Madurnaga, web developer from Horana, Sri Lanka. I
-              have rich experience in web site design and building and
-              customization, also I am good at WordPress.
+              Hey, I'm Kavinda Madurnaga, web developer from Sri Lanka. I have
+              rich experience in web design and building and customization, also
+              I am good at UI/UX.
             </p>
             <a
               href="https://raw.githubusercontent.com/foverokavindz/fovero-folio/main/public/mycv.pdf"

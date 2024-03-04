@@ -2,13 +2,13 @@ import React from 'react';
 import './Services.css';
 import Image1 from '../../assets/service-1.svg';
 import Image2 from '../../assets/service-2.svg';
-import Image3 from '../../assets/service-3.svg';
+import Image3 from '../../assets/wp.png';
 
 const data = [
   {
     id: 1,
-    image: Image1,
-    title: 'UI/UX design',
+    image: Image3,
+    title: 'Wordpress',
     description:
       'Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.',
   },
@@ -21,11 +21,32 @@ const data = [
   },
   {
     id: 3,
-    image: Image3,
-    title: 'Photography',
+    image: Image1,
+    title: 'UI/UX design',
     description:
       'Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.',
   },
+  // {
+  //   id: 4,
+  //   image: Image1,
+  //   title: 'UI/UX design',
+  //   description:
+  //     'Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.',
+  // },
+  // {
+  //   id: 5,
+  //   image: Image2,
+  //   title: 'Web Development',
+  //   description:
+  //     'Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.',
+  // },
+  // {
+  //   id: 6,
+  //   image: Image3,
+  //   title: 'Photography',
+  //   description:
+  //     'Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.',
+  // },
 ];
 
 const Services = () => {

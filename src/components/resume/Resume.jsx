@@ -7,49 +7,66 @@ const expData = [
     id: 1,
     category: 'education',
     icon: 'icon-graduation',
-    year: '2019 - present',
-    title: 'Academic Degree',
-    desc: 'Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.',
+    year: '2021 - present',
+    title: 'Bachelors of ICT in Software Technology',
+    desc: (
+      <span>
+        University of Sri Jayewardenepura <br /> GPA - 3.54
+      </span>
+    ),
   },
   {
     id: 2,
     category: 'education',
     icon: 'icon-graduation',
-    year: '2013 - 2017',
-    title: "Bachelor's Degree",
-    desc: 'Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.',
+    year: '2023 - 2024',
+    title: 'Diploma in Software Engineering',
+    desc: (
+      <span>
+        Developers Stack Academy <br /> Tvec Approved
+      </span>
+    ),
   },
   {
     id: 3,
     category: 'education',
     icon: 'icon-graduation',
-    year: '2009 - 2013',
-    title: 'Honours Degree',
-    desc: 'Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.',
+    year: '2017 - 2019',
+    title: 'GCE (AL) in Technology Stream',
+    desc: (
+      <span>
+        Taxila Central College Horana <br /> 2As and B pass
+      </span>
+    ),
   },
   {
     id: 4,
     category: 'experience',
     icon: 'icon-briefcase',
-    year: '2019 - present',
-    title: 'Web Designer',
-    desc: 'Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.',
+    year: ' Now',
+    title: 'Looking For Internship 😁',
+    desc: 'Currently, I’m equipped with full-stack web development skills and willing for an internship opportunity',
   },
   {
     id: 5,
     category: 'experience',
     icon: 'icon-briefcase',
-    year: '2013 - 2017',
-    title: 'Front-End Developer',
-    desc: 'Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.',
+    year: '2023 - 2024',
+    title: 'Web Developer (Wordpress)',
+    desc: (
+      <span>
+        Find X pvt LTD <br /> Worked remotely, Designed and built user-friendly
+        websites, and landing pages using WordPress and Elementor.
+      </span>
+    ),
   },
   {
     id: 6,
     category: 'experience',
     icon: 'icon-briefcase',
-    year: '2009 - 2013',
-    title: 'Back-End Developer',
-    desc: 'Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.',
+    year: '2019 - 2020',
+    title: 'ICT Tutor',
+    desc: 'Conduct ICT classes for students and help them to prepare for the examination.',
   },
 ];
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
 const aboutData = [
-  { id: 1, icon: 'icon-fire', title: 198, subtitle: 'Projects completed' },
-  { id: 2, icon: 'icon-cup', title: 5670, subtitle: 'Cups of coffee' },
-  { id: 3, icon: 'icon-people', title: 427, subtitle: 'Satisfied clients' },
-  { id: 4, icon: 'icon-badge', title: 35, subtitle: 'Nominees winner' },
+  { id: 1, icon: 'icon-fire', title: 50, subtitle: 'Projects completed' },
+  { id: 2, icon: 'icon-cup', title: 10, subtitle: 'Cups of coffee' },
+  { id: 3, icon: 'icon-people', title: 15, subtitle: 'Satisfied clients' },
+  { id: 4, icon: 'icon-badge', title: '01', subtitle: 'Years of Experience' },
 ];
 
 const AboutBox = () => {

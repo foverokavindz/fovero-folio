@@ -71,11 +71,11 @@
 }
 
 .ui__design {
-  width: 80%;
+  width: 70%;
   background-color: rgb(255, 76, 96);
 }
-.photography {
-  width: 60%;
+.wordpress {
+  width: 80%;
   background-color: rgb(108, 108, 299);
 }
 
@@ -107,16 +107,11 @@
   }
 }
 
-.about__data::before {
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #fff;
-  left: 49%;
-  top: -20px;
-}
-
 .about__img {
   justify-self: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
 }
 
 .about__box {
