@@ -7,45 +7,52 @@ import Work4 from '../../assets/work-4.svg';
 import Work5 from '../../assets/work-5.svg';
 import Work6 from '../../assets/work-6.svg';
 
+const categories = {
+  WEB: 'WEB',
+  DESKTOP: 'DESKTOP',
+  FIGMA: 'FIGMA',
+  WORDPRESS: 'WORDPRESS',
+};
+
 const menuItem = [
   {
     id: 1,
     image: Work1,
-    title: 'Project Management Illustration',
-    category: 'Design',
+    title: 'POS WARE - Point of Sale',
+    category: categories.DESKTOP,
   },
   {
     id: 2,
     image: Work2,
-    title: 'Guest App Walkthrough Screens',
-    category: 'Art',
+    title: 'Lilac E-Commerce Store',
+    category: categories.WEB,
   },
   {
     id: 3,
     image: Work3,
-    title: 'Delivery App Wireframe',
-    category: 'Branding',
+    title: 'Music Muse - Emotion base music player',
+    category: categories.WEB,
   },
   ,
   {
     id: 4,
     image: Work4,
-    title: 'Onboarding Motivation',
-    category: 'Design',
+    title: 'Attire Avenue',
+    category: categories.WEB,
   },
   ,
   {
     id: 5,
     image: Work5,
-    title: 'iMac Mockup Design',
-    category: 'Creative',
+    title: '.Talk - Chat App',
+    category: category.WEB,
   },
   ,
   {
     id: 6,
     image: Work6,
-    title: 'Game Store App Concept',
-    category: 'Art',
+    title: 'Virtual Galaxy Explorer',
+    category: 'Figma',
   },
 ];
 
@@ -67,17 +74,29 @@ const Portfolio = () => {
         <span className="work__item" onClick={() => setItems(menuItem)}>
           Everything
         </span>
-        <span className="work__item" onClick={() => filterItems('Creative')}>
-          Creative
+        <span
+          className="work__item"
+          onClick={() => filterItems(categories.WEB)}
+        >
+          Web Apps
         </span>
-        <span className="work__item" onClick={() => filterItems('Art')}>
-          Art
+        <span
+          className="work__item"
+          onClick={() => filterItems(categories.DESKTOP)}
+        >
+          Desktop Apps
         </span>
-        <span className="work__item" onClick={() => filterItems('Design')}>
-          Design
+        <span
+          className="work__item"
+          onClick={() => filterItems(categories.FIGMA)}
+        >
+          Figma Design
         </span>
-        <span className="work__item" onClick={() => filterItems('Branding')}>
-          Branding
+        <span
+          className="work__item"
+          onClick={() => filterItems(categories.WORDPRESS)}
+        >
+          Wordpress
         </span>
       </div>
 
