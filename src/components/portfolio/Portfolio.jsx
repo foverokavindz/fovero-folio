@@ -45,14 +45,14 @@ const menuItem = [
     id: 5,
     image: Work5,
     title: '.Talk - Chat App',
-    category: category.WEB,
+    category: categories.WEB,
   },
   ,
   {
     id: 6,
     image: Work6,
     title: 'Virtual Galaxy Explorer',
-    category: 'Figma',
+    category: categories.FIGMA,
   },
 ];
 
