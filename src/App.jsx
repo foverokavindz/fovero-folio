@@ -22,9 +22,16 @@ function App() {
         <Services />
         <Resume />
         <Portfolio />
-        <Pricing />
-        <Testimonials />
+
+        {/*
+        
+        <Pricing />        
+      
+        <Testimonials />  
+        
         <Blog />
+        
+        */}
         <Contact />
       </main>
     </>
