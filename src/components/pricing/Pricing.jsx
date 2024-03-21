@@ -11,7 +11,7 @@ const pricingData = [
     plan: 'Basic',
     title: 'A Simple option but powerful to manage your business',
     support: 'Email Support',
-    price: 49,
+    price: 29,
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const pricingData = [
     plan: 'Premium',
     title: 'Unlimited product including app integration and more features',
     support: 'Mon-Fri support',
-    price: 99,
+    price: 59,
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const pricingData = [
     plan: 'Ultimate',
     title: 'A wise option for large companies and individuals',
     support: '24/7 support',
-    price: 299,
+    price: 99,
   },
 ];
 

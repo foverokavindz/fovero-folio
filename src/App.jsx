@@ -9,8 +9,8 @@ import {
   Contact,
   Blog,
   About,
-} from './components';
-import './App.css';
+} from "./components";
+import "./App.css";
 
 function App() {
   return (
@@ -22,16 +22,18 @@ function App() {
         <Services />
         <Resume />
         <Portfolio />
+        <Pricing />
 
         {/*
         
-        <Pricing />        
+          
       
-        <Testimonials />  
+       
         
         <Blog />
         
         */}
+        <Testimonials />
         <Contact />
       </main>
     </>
