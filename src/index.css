@@ -93,6 +93,8 @@ button {
   outline: none;
 }
 
+
+
 img {
   max-width: 100%;
   height: auto;
@@ -145,6 +147,12 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   font-weight: var(--font-bold);
+}
+
+.disabled-btn {
+  opacity: 0.5; /* Adjust opacity to make it look disabled */
+
+  cursor: wait /* Show not-allowed cursor */
 }
 
 @keyframes button-push {

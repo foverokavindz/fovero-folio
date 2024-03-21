@@ -40,6 +40,13 @@
   z-index: 1;
 }
 
+.disable_contact__form-input {
+  
+  background-color: rgb(224, 224, 224);
+  color: rgb(99, 99, 99);
+  
+}
+
 .contact__form-area {
   height: 10.25rem;
 }
