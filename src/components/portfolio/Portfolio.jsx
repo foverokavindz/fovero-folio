@@ -6,6 +6,8 @@ import Work3 from '../../assets/work-3.svg';
 import Work4 from '../../assets/work-4.svg';
 import Work5 from '../../assets/work-5.svg';
 import Work6 from '../../assets/work-6.svg';
+import posImage from '../../assets/pos.png';
+import galaxyImage from '../../assets/galaxy.png';
 
 const categories = {
   WEB: 'WEB',
@@ -17,21 +19,24 @@ const categories = {
 const menuItem = [
   {
     id: 1,
-    image: Work1,
+    image: posImage,
     title: 'POS WARE - Point of Sale',
     category: categories.DESKTOP,
+    link: 'https://github.com/foverokavindz/TeamElitePOS',
   },
   {
     id: 2,
     image: Work2,
     title: 'Lilac E-Commerce Store',
     category: categories.WEB,
+    link: '#',
   },
   {
     id: 3,
     image: Work3,
     title: 'Music Muse - Emotion base music player',
     category: categories.WEB,
+    link: '#',
   },
   ,
   {
@@ -39,6 +44,7 @@ const menuItem = [
     image: Work4,
     title: 'Attire Avenue',
     category: categories.WEB,
+    link: '#',
   },
   ,
   {
@@ -46,13 +52,15 @@ const menuItem = [
     image: Work5,
     title: '.Talk - Chat App',
     category: categories.WEB,
+    link: '#',
   },
   ,
   {
     id: 6,
-    image: Work6,
+    image: galaxyImage,
     title: 'Virtual Galaxy Explorer',
     category: categories.FIGMA,
+    link: 'https://www.figma.com/file/LdoZU1FAYTeyVKvDXhHboo/Virtual-Galaxy-Explorer-(Community)?type=design&node-id=0-1&mode=design&t=u9FRpvMw0LcYOf4K-0',
   },
 ];
 
@@ -112,7 +120,7 @@ const Portfolio = () => {
               </div>
               <span className="work__category">{category}</span>
               <h3 className="work__title">{title}</h3>
-              <a href="#" className="work__button">
+              <a href={item.link} className="work__button" target="_blank">
                 <i className="icon-link work__button-icon"></i>
               </a>
             </div>
