@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Portfolio.css';
 import Work1 from '../../assets/work-1.svg';
-import Work2 from '../../assets/work-2.svg';
+import lilac from '../../assets/lilac.png';
 import Work3 from '../../assets/work-3.svg';
 import Work4 from '../../assets/work-4.svg';
 import Work5 from '../../assets/work-5.svg';
@@ -26,10 +26,10 @@ const menuItem = [
   },
   {
     id: 2,
-    image: Work2,
+    image: lilac,
     title: 'Lilac E-Commerce Store',
     category: categories.WEB,
-    link: '#',
+    link: 'https://linktr.ee/foveromw',
   },
   {
     id: 3,
