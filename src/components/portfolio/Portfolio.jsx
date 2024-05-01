@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Portfolio.css';
 import Work1 from '../../assets/work-1.svg';
 import lilac from '../../assets/lilac.png';
-import Work3 from '../../assets/work-3.svg';
+import musicmuse from '../../assets/musicmuse.png';
 import Work4 from '../../assets/work-4.svg';
 import Work5 from '../../assets/work-5.svg';
 import Work6 from '../../assets/work-6.svg';
@@ -33,10 +33,10 @@ const menuItem = [
   },
   {
     id: 3,
-    image: Work3,
+    image: musicmuse,
     title: 'Music Muse - Emotion base music player',
     category: categories.WEB,
-    link: '#',
+    link: 'https://github.com/Mu-me/Music-Muse',
   },
   ,
   {
