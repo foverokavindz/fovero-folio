@@ -9,6 +9,7 @@ import Work6 from '../../assets/work-6.svg';
 import posImage from '../../assets/pos.png';
 import galaxyImage from '../../assets/galaxy.png';
 import talk from '../../assets/talk.png';
+import attireAvenue from '../../assets/attireAvenue.png';
 
 const categories = {
   WEB: 'WEB',
@@ -42,10 +43,10 @@ const menuItem = [
   ,
   {
     id: 4,
-    image: Work4,
+    image: attireAvenue,
     title: 'Attire Avenue',
     category: categories.WEB,
-    link: '#',
+    link: 'https://github.com/Attire-Avenue-Online-Store',
   },
   ,
   {
