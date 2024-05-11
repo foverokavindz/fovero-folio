@@ -8,6 +8,7 @@ import Work5 from '../../assets/work-5.svg';
 import Work6 from '../../assets/work-6.svg';
 import posImage from '../../assets/pos.png';
 import galaxyImage from '../../assets/galaxy.png';
+import talk from '../../assets/talk.png';
 
 const categories = {
   WEB: 'WEB',
@@ -49,10 +50,10 @@ const menuItem = [
   ,
   {
     id: 5,
-    image: Work5,
+    image: talk,
     title: '.Talk - Chat App',
     category: categories.WEB,
-    link: '#',
+    link: 'https://github.com/foverokavindz/chat-app-1',
   },
   ,
   {
