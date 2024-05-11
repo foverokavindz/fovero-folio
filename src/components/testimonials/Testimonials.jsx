@@ -17,18 +17,18 @@ const reviewData = [
   {
     id: 1,
     image: Image1,
-    title: 'John Doe',
-    subtitle: 'Product designer at Dribble',
+    title: 'David Brown',
+    subtitle: 'A imagine designer at mind',
     comment:
-      'I enjoy working with the theme and learn so much. You       guys make the process fun and interesting. Good luck! 👍',
+      'Not only did they deliver a stunning website, but their attention to UI/UX details truly enhanced the user experience. Highly recommend!',
   },
   {
     id: 2,
     image: Image2,
-    title: 'John Doe',
-    subtitle: 'Product designer at Dribble',
+    title: 'Taylor Swift',
+    subtitle: 'Virtual Product designer at Nowhere',
     comment:
-      'I enjoy working with the theme and learn so much. You       guys make the process fun and interesting. Good luck! 👍',
+      'I enjoy working with the theme and learn so much. attention to detail and commitment to delivering quality work is commendable',
   },
 ];
 
