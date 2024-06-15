@@ -44,8 +44,8 @@ const expData = [
     category: 'experience',
     icon: 'icon-briefcase',
     year: ' Now',
-    title: 'Looking For Internship 😁',
-    desc: 'Currently, I’m equipped with full-stack web development skills and willing for an internship opportunity',
+    title: 'SE Intern @ Verdentra',
+    desc: 'I’m equipped with full-stack web development skills and willing learn new technologies',
   },
   {
     id: 5,
