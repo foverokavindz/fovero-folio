@@ -43,9 +43,9 @@ const expData = [
     id: 4,
     category: 'experience',
     icon: 'icon-briefcase',
-    year: ' Now',
+    year: '2024 Jun - 2024 Dec',
     title: 'SE Intern @ Verdentra',
-    desc: 'I’m equipped with full-stack web development skills and willing learn new technologies',
+    desc: 'Experienced in developing and optimizing web applications, system workflows, and database migrations using modern technologies, with a strong focus on user experience, efficiency, and collaboration.',
   },
   {
     id: 5,

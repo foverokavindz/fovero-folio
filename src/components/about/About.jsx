@@ -24,7 +24,7 @@ const About = () => {
         <div className="about__data grid">
           <div className="about__info">
             <p className="about__description">
-              Hey, I'm Kavinda Madurnaga, web developer from Sri Lanka. I have
+              Hey, I'm Kavinda Weerasinghe, web developer from Sri Lanka. I have
               rich experience in web design and building and customization, also
               I am good at UI/UX.
             </p>
