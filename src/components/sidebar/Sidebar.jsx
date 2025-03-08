@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
 import Logo from '../../assets/logo.png';
+import LogoWhite from '../../assets/logoWhite.png';
+import { useTheme } from '../../context/theme';
 
 const navLinks = [
   { id: 1, link: '#home', icon: 'icon-home' },
@@ -13,6 +15,7 @@ const navLinks = [
 ];
 
 const Sidebar = () => {
+  const { isDarkMode } = useTheme();
   const [toggle, showMenu] = useState(false);
   return (
     <>
@@ -21,7 +24,11 @@ const Sidebar = () => {
         onClick={() => showMenu(!toggle)}
       >
         <a href="#home" className="nav__logo">
-          <img src={Logo} alt="" className="sidebar__logo" />
+          <img
+            src={isDarkMode ? LogoWhite : Logo}
+            alt=""
+            className="sidebar__logo"
+          />
         </a>
 
         <nav className="nav">

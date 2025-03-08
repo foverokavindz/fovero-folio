@@ -16,17 +16,17 @@
 }
 
 .services__card:nth-child(1) {
-  background-color: #a2e3ff;
+  background-color: var(--sky-blue-color);
   box-shadow: 0px 5px 20px 0px rgba(108, 108, 229 / 50%);
 }
 
 .services__card:nth-child(2) {
-  background-color: rgb(249, 245, 76);
+  background-color: var(--canary-yellow-color);
   box-shadow: 0px 5px 20px 0px rgba(249, 215, 76 / 50%);
 }
 
 .services__card:nth-child(3) {
-  background-color: rgb(249, 123, 139);
+  background-color: var(--salmon-pink-color);
   box-shadow: 0px 5px 20px 0px rgba(249, 123, 139 / 50%);
 }
 

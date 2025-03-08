@@ -9,7 +9,12 @@
   --title-color: hsl(244, 24%, 26%);
   --text-color: hsl(244, 16%, 43%);
   --body-color: hsl(258, 60%, 98%);
+  --border-color: rgba(0, 0, 0, 0.05);
+  --gray-color: #dedeea;
   --container-color: #fff;
+  --sky-blue-color: #a2e3ff;
+  --canary-yellow-color: rgb(249, 245, 76);
+  --salmon-pink-color: rgb(249, 123, 139);
 
   /*font and typography*/
   /* .5rem = 8 | 1rem = 16px*/
@@ -31,6 +36,34 @@
 
   /*border radius*/
   --border-radius: 20px;
+
+  /* Dark theme colors */
+  --first-color-dark: hsl(353, 70%, 55%);
+  --title-color-dark: hsl(244, 24%, 90%);
+  --text-color-dark: hsl(244, 16%, 80%);
+  --body-color-dark: hsl(244, 24%, 12%);
+  --border-color-dark: rgba(255, 255, 255, 0.1);
+  --container-color-dark: hsl(244, 24%, 16%);
+  --shadow-dark: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
+  --gray-color-dark: #dedeea44;
+  --sky-blue-color-dark: #06405e;
+  --canary-yellow-color-dark: #4b441b;
+  --salmon-pink-color-dark: rgb(100, 44, 51);
+}
+
+/* Dark theme class */
+.dark-theme {
+  --first-color: var(--first-color-dark);
+  --title-color: var(--title-color-dark);
+  --text-color: var(--text-color-dark);
+  --body-color: var(--body-color-dark);
+  --border-color: var(--border-color-dark);
+  --container-color: var(--container-color-dark);
+  --shadow: var(--shadow-dark);
+  --gray-color: var(--gray-color-dark);
+  --sky-blue-color: var(--sky-blue-color-dark);
+  --canary-yellow-color: var(--canary-yellow-color-dark);
+  --salmon-pink-color: var(--salmon-pink-color-dark);
 }
 
 /* responsive typogrphy*/
@@ -93,8 +126,6 @@ button {
   outline: none;
 }
 
-
-
 img {
   max-width: 100%;
   height: auto;
@@ -152,7 +183,7 @@ img {
 .disabled-btn {
   opacity: 0.5; /* Adjust opacity to make it look disabled */
 
-  cursor: wait /* Show not-allowed cursor */
+  cursor: wait; /* Show not-allowed cursor */
 }
 
 @keyframes button-push {

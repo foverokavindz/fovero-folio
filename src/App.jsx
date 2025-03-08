@@ -9,12 +9,14 @@ import {
   Contact,
   Blog,
   About,
-} from "./components";
-import "./App.css";
+} from './components';
+import './App.css';
+import ThemeToggle from './components/themeToggle/ThemeToggle';
 
 function App() {
   return (
     <>
+      <ThemeToggle />
       <Sidebar />
       <main className="main">
         <Home />
@@ -24,12 +26,8 @@ function App() {
         <Portfolio />
         <Pricing />
 
-        {/*
-        
+        {/*   
           
-      
-       
-        
         <Blog />
         
         */}
