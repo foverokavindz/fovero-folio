@@ -3,8 +3,8 @@
   top: 1.5rem;
   right: 1.5rem;
   z-index: 999;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.9rem;
+  height: 2.9rem;
   border-radius: 50%;
   background-color: var(--container-color);
   color: var(--title-color);
@@ -30,7 +30,7 @@
   .theme-toggle {
     top: 1rem;
     right: 1rem;
-    width: 2rem;
-    height: 2rem;
+    width: 2.9rem;
+    height: 2.9rem;
   }
 }

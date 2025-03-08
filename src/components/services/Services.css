@@ -38,14 +38,14 @@
 .services__title {
   font-size: var(--h3-font-size);
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--title-color);
 }
 
 .services__description {
-  color: #f8f9fa;
+  color: var(--text-color);
 }
 
-.services__card:nth-child(2) .services__title {
+/* .services__card:nth-child(2) .services__title {
   color: var(--title-color);
 }
 
@@ -59,7 +59,7 @@
 
 .services__card:nth-child(1) .services__description {
   color: var(--text-color);
-}
+} */
 
 @media screen and (max-width: 1024px) {
   .services__container {

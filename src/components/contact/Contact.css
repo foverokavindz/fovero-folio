@@ -41,10 +41,8 @@
 }
 
 .disable_contact__form-input {
-  
-  background-color: rgb(224, 224, 224);
+  background-color: var(--disabled-color);
   color: rgb(99, 99, 99);
-  
 }
 
 .contact__form-area {

@@ -54,7 +54,11 @@ const Sidebar = () => {
         className={toggle ? 'nav__toggle nav__toggle-open' : 'nav__toggle'}
         onClick={() => showMenu(!toggle)}
       >
-        <i className="icon-menu"></i>
+        <div className="burger-icon">
+          <span className="burger-bar"></span>
+          <span className="burger-bar"></span>
+          <span className="burger-bar"></span>
+        </div>
       </div>
     </>
   );

@@ -23,7 +23,7 @@
 .nav__link {
   font-size: 1.3rem;
   color: var(--title-color);
-  font-weight: var (--font-bold);
+  font-weight: var(--font-bold);
   transition: 0.3s;
 }
 
@@ -47,7 +47,6 @@
 .sidebar__logo {
   width: 100px;
   height: auto;
-
   background-size: cover;
   background-position: center;
 }
@@ -60,12 +59,50 @@
   height: 40px;
   width: 45px;
   background-color: var(--body-color);
-  border: 1px solid #e8dfec;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 10;
   transition: 0.3s;
+}
+
+/* Burger Icon Animation */
+.burger-icon {
+  width: 22px;
+  height: 17px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--title-color);
+  border-radius: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animation for the burger to arrow transformation */
+.nav__toggle-open .burger-icon .burger-bar:first-child {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav__toggle-open .burger-icon .burger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle-open .burger-icon .burger-bar:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Hover effect for burger icon */
+.nav__toggle:hover .burger-bar {
+  background-color: var(--title-color);
 }
 
 @media screen and (max-width: 1024px) {
@@ -83,5 +120,17 @@
 
   .show-menu {
     left: 0;
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .nav__toggle {
+    top: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .nav__toggle-open {
+    left: 130px;
   }
 }

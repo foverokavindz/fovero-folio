@@ -14,7 +14,8 @@
   --container-color: #fff;
   --sky-blue-color: #a2e3ff;
   --canary-yellow-color: rgb(249, 245, 76);
-  --salmon-pink-color: rgb(249, 123, 139);
+  --salmon-pink-color: rgb(255, 130, 146);
+  --diabled-color: rgba(224, 224, 224, 0.438);
 
   /*font and typography*/
   /* .5rem = 8 | 1rem = 16px*/
@@ -47,8 +48,9 @@
   --shadow-dark: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
   --gray-color-dark: #dedeea44;
   --sky-blue-color-dark: #06405e;
-  --canary-yellow-color-dark: #4b441b;
+  --canary-yellow-color-dark: #5f490b;
   --salmon-pink-color-dark: rgb(100, 44, 51);
+  --disabled-color-dark: hsla(245, 11%, 22%, 0.151);
 }
 
 /* Dark theme class */
@@ -64,6 +66,7 @@
   --sky-blue-color: var(--sky-blue-color-dark);
   --canary-yellow-color: var(--canary-yellow-color-dark);
   --salmon-pink-color: var(--salmon-pink-color-dark);
+  --disabled-color: var(--disabled-color-dark);
 }
 
 /* responsive typogrphy*/
@@ -166,6 +169,10 @@ img {
   position: absolute;
   left: -0.875rem;
   top: -0.875rem;
+}
+
+.dark-theme .section__title::before {
+  background: url(./assets/dots-bg-dark.svg);
 }
 
 .btn {
