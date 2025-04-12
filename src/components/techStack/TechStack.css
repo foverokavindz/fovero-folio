@@ -1,0 +1,115 @@
+.tech-stack__container {
+  background-color: var(--container-color);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+}
+
+.tech-stack__category {
+  background-color: var(--container-color);
+  padding: 1.875rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.tech-stack__category:hover {
+  transform: translateY(-5px);
+}
+
+.tech-stack__category-title {
+  font-size: var(--h3-font-size);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.tech-stack__category-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--first-color);
+}
+
+.tech-stack__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.tech-stack__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: 0.3s;
+}
+
+.tech-stack__item:hover {
+  transform: translateY(-5px);
+}
+
+.tech-stack__icon {
+  font-size: 2.5rem;
+  color: var(--first-color);
+  margin-bottom: 0.75rem;
+}
+
+.tech-stack__name {
+  font-size: var(--small-font-size);
+  text-align: center;
+  font-weight: var(--font-medium);
+}
+
+/* Special styling for C# icon */
+.csharp-icon {
+  position: relative;
+}
+
+.csharp-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: var(--first-color);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media screen and (max-width: 1024px) {
+  .tech-stack__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tech-stack__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tech-stack__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .tech-stack__container {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-stack__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

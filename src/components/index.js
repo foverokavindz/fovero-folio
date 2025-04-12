@@ -8,6 +8,7 @@ import Home from './home/Home';
 import Contact from './contact/Contact';
 import Blog from './blog/Blog';
 import About from './about/About';
+import TechStack from './techStack/TechStack';
 
 export {
   Testimonials,
@@ -20,4 +21,5 @@ export {
   Contact,
   Blog,
   About,
+  TechStack,
 };

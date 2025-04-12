@@ -9,6 +9,7 @@ import {
   Contact,
   Blog,
   About,
+  TechStack,
 } from './components';
 import './App.css';
 import ThemeToggle from './components/themeToggle/ThemeToggle';
@@ -22,6 +23,7 @@ function App() {
         <Home />
         <About />
         <Services />
+        <TechStack />
         <Resume />
         <Portfolio />
         <Pricing />
