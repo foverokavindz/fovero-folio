@@ -27,12 +27,7 @@ function App() {
         <Resume />
         <Portfolio />
         <Pricing />
-
-        {/*   
-          
         <Blog />
-        
-        */}
         <Testimonials />
         <Contact />
       </main>

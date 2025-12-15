@@ -48,6 +48,13 @@
   margin-bottom: 0.5rem;
 }
 
+.blog__description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
 .blog__meta {
   display: flex;
   column-gap: 0.6rem;

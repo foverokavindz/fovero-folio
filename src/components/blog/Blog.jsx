@@ -12,6 +12,7 @@ const blogData = [
     metaTag: '09 February, 2022',
     author: 'Kavinda',
     image: Image1,
+    description: 'Discover the top app development tools that can streamline your workflow and enhance productivity in your projects.',
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const blogData = [
     metaTag: '07 February, 2022',
     author: 'Kavinda',
     image: Image2,
+    description: 'Learn about essential development tools that every developer should have in their toolkit for successful project delivery.',
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const blogData = [
     metaTag: '05 February, 2022',
     author: 'Kavinda',
     image: Image3,
+    description: 'Essential insights and tips for launching and growing your startup business in today\'s competitive market.',
   },
 ];
 
@@ -37,7 +40,7 @@ const Blog = () => {
       <h2 className="section__title">Latest Posts</h2>
 
       <div className="blog__container grid">
-        {blogData.map(({ id, category, title, metaTag, author, image }) => {
+        {blogData.map(({ id, category, title, metaTag, author, image, description }) => {
           return (
             <div className="blog__card" key={id}>
               <a href="">
@@ -50,6 +53,7 @@ const Blog = () => {
               </div>
               <div className="blog__details">
                 <h3 className="blog__title">{title}</h3>
+                <p className="blog__description">{description}</p>
 
                 <div className="blog__meta">
                   <span>{metaTag}</span>
