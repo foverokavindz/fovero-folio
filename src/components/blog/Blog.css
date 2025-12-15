@@ -18,7 +18,7 @@
   transition: 0.3s;
 }
 
-.blog—img,
+.blog__img,
 .blog__thumb:hover {
   transform: scale(1.1);
   transition: 0.3s ease-in-out;

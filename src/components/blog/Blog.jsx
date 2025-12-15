@@ -16,7 +16,7 @@ const blogData = [
   {
     id: 2,
     category: 'Tutorial',
-    title: '5 Best App Development Tool for Your Projects',
+    title: 'Complete Guide to Modern Web Development',
     metaTag: '07 February, 2022',
     author: 'Kavinda',
     image: Image2,
@@ -47,7 +47,7 @@ const Blog = () => {
               </a>
               <div className="blog__thumb">
                 <a href="">
-                  <img src={image} className="blog__img" />
+                  <img src={image} alt={title} className="blog__img" />
                 </a>
               </div>
               <div className="blog__details">
