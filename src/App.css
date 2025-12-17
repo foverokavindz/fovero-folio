@@ -5,35 +5,7 @@
 }
 
 /* Memphis floating decorations */
-.main::before {
-  content: '';
-  position: fixed;
-  top: 20%;
-  right: 5%;
-  width: 80px;
-  height: 80px;
-  background: var(--memphis-yellow);
-  border: 3px solid var(--memphis-black);
-  transform: rotate(15deg);
-  z-index: -1;
-  opacity: 0.3;
-  animation: memphis-rotate 20s linear infinite;
-}
 
-.main::after {
-  content: '';
-  position: fixed;
-  bottom: 15%;
-  right: 10%;
-  width: 60px;
-  height: 60px;
-  background: var(--memphis-pink);
-  border: 3px solid var(--memphis-black);
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0.3;
-  animation: memphis-bounce 3s ease-in-out infinite;
-}
 
 @keyframes memphis-rotate {
   from {
