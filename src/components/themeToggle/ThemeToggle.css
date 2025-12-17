@@ -1,36 +1,43 @@
+/* MEMPHIS DESIGN - THEME TOGGLE */
 .theme-toggle {
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
   z-index: 999;
-  width: 2.9rem;
-  height: 2.9rem;
-  border-radius: 50%;
-  background-color: var(--container-color);
-  color: var(--title-color);
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: var(--memphis-pink);
+  color: var(--memphis-black);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-sm);
   cursor: pointer;
-  border: none;
   outline: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .theme-toggle:hover {
-  transform: translateY(-3px);
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--memphis-black);
+  background-color: var(--memphis-yellow);
+}
+
+.theme-toggle:active {
+  transform: translate(0, 0);
+  box-shadow: var(--shadow-sm);
 }
 
 .theme-toggle svg {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 768px) {
   .theme-toggle {
     top: 1rem;
     right: 1rem;
-    width: 2.9rem;
-    height: 2.9rem;
+    width: 2.8rem;
+    height: 2.8rem;
   }
 }

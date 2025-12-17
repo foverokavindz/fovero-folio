@@ -1,102 +1,180 @@
+/* MEMPHIS DESIGN - ABOUT SECTION */
 .about__container {
   grid-template-columns: 3fr 9fr;
-  column-gap: 1.5875rem;
+  column-gap: 2rem;
 }
 
 .about__data {
-  padding: 1.875rem;
+  padding: 2rem;
   background-color: var(--container-color);
-  box-shadow: var(--shadow);
-  border-radius: var(--border-radius);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-lg);
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1.875rem;
   align-items: flex-start;
   position: relative;
 }
 
+/* Memphis Triangle Arrow */
 .about__data::before {
   content: '';
   width: 0;
   height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 15px solid var(--container-color);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 20px solid var(--memphis-black);
   position: absolute;
-  left: -0.93rem;
+  left: -20px;
   top: 20%;
+}
+
+.about__data::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  background: var(--memphis-pink);
+  border: var(--border-thick);
+  transform: rotate(15deg);
+  z-index: -1;
 }
 
 .about__description {
   margin-bottom: 1rem;
   text-align: justify;
+  line-height: 1.8;
 }
 
 .about__skills {
-  row-gap: 1.25rem;
+  row-gap: 1.5rem;
 }
 
 .skills__titles {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .skills__name {
   font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .skills__number {
   line-height: 1.2;
+  font-weight: var(--font-bold);
 }
 
 .skills__bar,
 .skills__percentage {
-  height: 7px;
-  border-radius: 0.25rem;
+  height: 12px;
+  border: var(--border-medium);
 }
 
 .skills__bar {
-  background-color: #f1f1f1;
+  background-color: var(--memphis-cream);
 }
 
 .skills__percentage {
   display: block;
-  background-color: var(--first-color);
+  position: relative;
 }
 
+/* Memphis striped progress bars */
 .development {
   width: 90%;
-  background-color: rgb(255, 209, 92);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--memphis-yellow),
+    var(--memphis-yellow) 5px,
+    var(--memphis-black) 5px,
+    var(--memphis-black) 7px
+  );
 }
 
 .ui__design {
   width: 70%;
-  background-color: rgb(255, 76, 96);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--memphis-pink),
+    var(--memphis-pink) 5px,
+    var(--memphis-black) 5px,
+    var(--memphis-black) 7px
+  );
 }
+
 .wordpress {
   width: 80%;
-  background-color: rgb(108, 108, 299);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--memphis-teal),
+    var(--memphis-teal) 5px,
+    var(--memphis-black) 5px,
+    var(--memphis-black) 7px
+  );
 }
 
 .about__boxes {
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 1.875rem;
-  margin-top: 4.35rem;
+  column-gap: 1.5rem;
+  margin-top: 4rem;
 }
 
 .about__box {
   display: flex;
   column-gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--container-color);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.about__box:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--memphis-black);
+}
+
+.about__box:nth-child(1) {
+  border-color: var(--memphis-pink);
+}
+
+.about__box:nth-child(2) {
+  border-color: var(--memphis-yellow);
+}
+
+.about__box:nth-child(3) {
+  border-color: var(--memphis-teal);
+}
+
+.about__box:nth-child(4) {
+  border-color: var(--memphis-purple);
 }
 
 .about__icon {
   font-size: var(--h1-font-size);
-  color: var(--gray-color);
+  color: var(--memphis-pink);
+}
+
+.about__box:nth-child(2) .about__icon {
+  color: var(--memphis-yellow);
+}
+
+.about__box:nth-child(3) .about__icon {
+  color: var(--memphis-teal);
+}
+
+.about__box:nth-child(4) .about__icon {
+  color: var(--memphis-purple);
 }
 
 .about__title {
-  font-size: 1.875rem;
+  font-size: 2rem;
+  font-family: var(--heading-font);
 }
 
 @media screen and (max-width: 1024px) {
@@ -111,7 +189,9 @@
   justify-self: center;
   width: 200px;
   height: 200px;
-  border-radius: 100%;
+  border: var(--border-thick);
+  padding: 8px;
+  background: var(--memphis-teal);
 }
 
 .about__box {
@@ -127,7 +207,7 @@
     row-gap: 1.875rem;
   }
   .about__data::before {
-    left: 47%;
+    display: none;
   }
 
   .about__data {

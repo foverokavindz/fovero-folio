@@ -1,23 +1,77 @@
+/* MEMPHIS DESIGN - TECH STACK SECTION */
 .tech-stack__container {
   background-color: var(--container-color);
   padding: 2.5rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-lg);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
+  position: relative;
+}
+
+/* Memphis decorative elements */
+.tech-stack__container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--memphis-yellow);
+  border: var(--border-thick);
+  transform: rotate(10deg);
+  z-index: -1;
+}
+
+.tech-stack__container::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: 40px;
+  width: 35px;
+  height: 35px;
+  background: var(--memphis-pink);
+  border: var(--border-thick);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .tech-stack__category {
   background-color: var(--container-color);
-  padding: 1.875rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease-in-out;
+  padding: 1.5rem;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
 }
 
 .tech-stack__category:hover {
-  transform: translateY(-5px);
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--memphis-black);
+}
+
+.tech-stack__category:nth-child(1) {
+  border-color: var(--memphis-pink);
+}
+
+.tech-stack__category:nth-child(2) {
+  border-color: var(--memphis-yellow);
+}
+
+.tech-stack__category:nth-child(3) {
+  border-color: var(--memphis-teal);
+}
+
+.tech-stack__category:nth-child(4) {
+  border-color: var(--memphis-purple);
+}
+
+.tech-stack__category:nth-child(5) {
+  border-color: var(--memphis-orange);
+}
+
+.tech-stack__category:nth-child(6) {
+  border-color: var(--memphis-blue);
 }
 
 .tech-stack__category-title {
@@ -26,23 +80,34 @@
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.75rem;
+  font-family: var(--heading-font);
+  letter-spacing: 2px;
 }
 
+/* Memphis zigzag underline */
 .tech-stack__category-title::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background-color: var(--first-color);
+  width: 60px;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--memphis-pink),
+    var(--memphis-pink) 8px,
+    var(--memphis-yellow) 8px,
+    var(--memphis-yellow) 16px,
+    var(--memphis-teal) 16px,
+    var(--memphis-teal) 24px
+  );
 }
 
 .tech-stack__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .tech-stack__item {
@@ -50,24 +115,28 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  border-radius: 0.75rem;
-  transition: 0.3s;
+  border: var(--border-medium);
+  background: var(--memphis-cream);
+  transition: 0.2s ease;
 }
 
 .tech-stack__item:hover {
-  transform: translateY(-5px);
+  background: var(--memphis-yellow);
+  transform: translateY(-3px);
 }
 
 .tech-stack__icon {
   font-size: 2.5rem;
-  color: var(--first-color);
-  margin-bottom: 0.75rem;
+  color: var(--memphis-black);
+  margin-bottom: 0.5rem;
 }
 
 .tech-stack__name {
   font-size: var(--small-font-size);
   text-align: center;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Special styling for C# icon */
@@ -82,7 +151,7 @@
   left: 50%;
   width: 20px;
   height: 2px;
-  background-color: var(--first-color);
+  background-color: var(--memphis-black);
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 

@@ -1,28 +1,45 @@
-/* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* Google fonts - Memphis uses bold, geometric fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&display=swap');
 
-/* Variable css */
+/* Variable css - MEMPHIS DESIGN SYSTEM */
 :root {
-  /* Colors */
-  /* Color mode HSL (hue, saturation,lightness) */
-  --first-color: hsl(353, 100%, 65%);
-  --title-color: hsl(244, 24%, 26%);
-  --text-color: hsl(244, 16%, 43%);
-  --body-color: hsl(258, 60%, 98%);
-  --border-color: rgba(0, 0, 0, 0.05);
-  --gray-color: #dedeea;
-  --container-color: #fff;
-  --sky-blue-color: #a2e3ff;
-  --canary-yellow-color: rgb(249, 245, 76);
-  --salmon-pink-color: rgb(255, 130, 146);
+  /* Memphis Color Palette - Bold, vibrant, high contrast */
+  --memphis-pink: #FF6B9D;
+  --memphis-yellow: #FFE156;
+  --memphis-teal: #00D4AA;
+  --memphis-blue: #4ECDC4;
+  --memphis-purple: #9B59B6;
+  --memphis-orange: #FF8C42;
+  --memphis-red: #FF4757;
+  --memphis-black: #1A1A2E;
+  --memphis-cream: #FFF8E7;
+  
+  /* Primary colors mapped to Memphis palette */
+  --first-color: var(--memphis-pink);
+  --title-color: var(--memphis-black);
+  --text-color: #3D3D5C;
+  --body-color: var(--memphis-cream);
+  --border-color: var(--memphis-black);
+  --gray-color: #E8E8F0;
+  --container-color: #FFFFFF;
+  --sky-blue-color: var(--memphis-teal);
+  --canary-yellow-color: var(--memphis-yellow);
+  --salmon-pink-color: var(--memphis-pink);
   --diabled-color: rgba(224, 224, 224, 0.438);
+  
+  /* Memphis accent colors */
+  --accent-1: var(--memphis-yellow);
+  --accent-2: var(--memphis-teal);
+  --accent-3: var(--memphis-pink);
+  --accent-4: var(--memphis-purple);
+  --accent-5: var(--memphis-orange);
 
-  /*font and typography*/
-  /* .5rem = 8 | 1rem = 16px*/
-  --body-font: 'Rubik', sans-serif;
-  --h1-font-size: 2.25rem;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1.25rem;
+  /*font and typography - Bold geometric fonts */
+  --body-font: 'Space Grotesk', sans-serif;
+  --heading-font: 'Bebas Neue', sans-serif;
+  --h1-font-size: 3rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
   --normal-font-size: 1rem;
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.813rem;
@@ -32,28 +49,35 @@
   --font-semibold: 600;
   --font-bold: 700;
 
-  /* box shadow*/
-  --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+  /* Memphis box shadow - Bold, offset shadows */
+  --shadow: 6px 6px 0px var(--memphis-black);
+  --shadow-sm: 4px 4px 0px var(--memphis-black);
+  --shadow-lg: 8px 8px 0px var(--memphis-black);
 
-  /*border radius*/
-  --border-radius: 20px;
+  /*border radius - Memphis uses sharp edges with occasional curves */
+  --border-radius: 0px;
+  --border-radius-blob: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  
+  /* Memphis border */
+  --border-thick: 3px solid var(--memphis-black);
+  --border-medium: 2px solid var(--memphis-black);
 
-  /* Dark theme colors */
-  --first-color-dark: hsl(353, 70%, 55%);
-  --title-color-dark: hsl(244, 24%, 90%);
-  --text-color-dark: hsl(244, 16%, 80%);
-  --body-color-dark: hsl(244, 24%, 12%);
-  --border-color-dark: rgba(255, 255, 255, 0.1);
-  --container-color-dark: hsl(244, 24%, 16%);
-  --shadow-dark: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
-  --gray-color-dark: #dedeea44;
-  --sky-blue-color-dark: #06405e;
-  --canary-yellow-color-dark: #5f490b;
-  --salmon-pink-color-dark: rgb(100, 44, 51);
+  /* Dark theme colors - Memphis Night Mode */
+  --first-color-dark: var(--memphis-pink);
+  --title-color-dark: #F8F8F8;
+  --text-color-dark: #D4D4E4;
+  --body-color-dark: #1A1A2E;
+  --border-color-dark: #F8F8F8;
+  --container-color-dark: #16213E;
+  --shadow-dark: 6px 6px 0px var(--memphis-pink);
+  --gray-color-dark: #3D3D5C;
+  --sky-blue-color-dark: #00A884;
+  --canary-yellow-color-dark: #D4A800;
+  --salmon-pink-color-dark: #D4547A;
   --disabled-color-dark: hsla(245, 11%, 22%, 0.151);
 }
 
-/* Dark theme class */
+/* Dark theme class - Memphis Night Mode */
 .dark-theme {
   --first-color: var(--first-color-dark);
   --title-color: var(--title-color-dark);
@@ -67,14 +91,33 @@
   --canary-yellow-color: var(--canary-yellow-color-dark);
   --salmon-pink-color: var(--salmon-pink-color-dark);
   --disabled-color: var(--disabled-color-dark);
+  --memphis-cream: #1A1A2E;
+}
+
+/* Memphis Background Pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 20%, var(--memphis-pink) 2px, transparent 2px),
+    radial-gradient(circle at 90% 80%, var(--memphis-teal) 2px, transparent 2px),
+    radial-gradient(circle at 50% 50%, var(--memphis-yellow) 1px, transparent 1px);
+  background-size: 80px 80px, 60px 60px, 40px 40px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* responsive typogrphy*/
 @media screen and (max-width: 1024px) {
   :root {
-    --h1-font-size: 1.75rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
     --normal-font-size: 0.938rem;
     --small-font-size: 0.813rem;
     --smaller-font-size: 0.75rem;
@@ -105,14 +148,18 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   line-height: 1.7;
+  position: relative;
 }
 
 h1,
 h2,
 h3 {
   color: var(--title-color);
-  font-weight: var(--font-semibold);
-  line-height: 1.2;
+  font-weight: var(--font-bold);
+  line-height: 1.1;
+  font-family: var(--heading-font);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 ul {
@@ -135,7 +182,7 @@ img {
   vertical-align: middle;
 }
 
-/* Reusable css classses*/
+/* Reusable css classses - MEMPHIS STYLE */
 
 .container {
   max-width: 1080px;
@@ -151,6 +198,34 @@ img {
 .section {
   padding-top: 7rem;
   padding-bottom: 2rem;
+  position: relative;
+}
+
+/* Memphis Section Decorations */
+.section::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: var(--memphis-yellow);
+  border: var(--border-thick);
+  top: 4rem;
+  right: 5%;
+  transform: rotate(15deg);
+  z-index: -1;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--memphis-teal);
+  border-radius: 50%;
+  border: var(--border-thick);
+  bottom: 3rem;
+  left: 8%;
+  z-index: -1;
 }
 
 .section__title {
@@ -159,55 +234,115 @@ img {
   font-weight: var(--font-bold);
   position: relative;
   margin-bottom: 3.75rem;
+  font-family: var(--heading-font);
+  letter-spacing: 3px;
+  display: inline-block;
+  background: linear-gradient(180deg, transparent 60%, var(--memphis-yellow) 60%);
+  padding: 0 10px;
 }
 
 .section__title::before {
-  content: '';
-  background: url(./assets/dots-bg.svg);
-  height: 2.25rem;
-  width: 2.25rem;
+  content: '//';
+  color: var(--memphis-pink);
+  font-size: 2rem;
   position: absolute;
-  left: -0.875rem;
-  top: -0.875rem;
+  left: -1.5rem;
+  top: -0.5rem;
+}
+
+.section__title::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--memphis-teal);
+  border: 2px solid var(--memphis-black);
+  border-radius: 50%;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .dark-theme .section__title::before {
-  background: url(./assets/dots-bg-dark.svg);
+  color: var(--memphis-pink);
 }
 
+/* Memphis Button Style */
 .btn {
-  padding: 0.75rem 2rem;
+  padding: 1rem 2.5rem;
   line-height: 1;
-  border-radius: 1.875rem;
-  box-shadow: 0 0 1px rgba(245, 189, 189, 0);
-  border: 1px solid transparent;
-  color: #fff;
+  border: var(--border-thick);
+  box-shadow: var(--shadow);
+  color: var(--memphis-black);
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: var(--memphis-yellow);
   font-weight: var(--font-bold);
+  font-family: var(--heading-font);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .disabled-btn {
-  opacity: 0.5; /* Adjust opacity to make it look disabled */
-
-  cursor: wait; /* Show not-allowed cursor */
+  opacity: 0.5;
+  cursor: wait;
 }
 
 @keyframes button-push {
   50% {
-    transform: scale(0.8);
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0px var(--memphis-black);
   }
   100% {
-    transform: scale(1);
+    transform: translate(0, 0);
+    box-shadow: var(--shadow);
   }
 }
 
 .btn:hover {
   animation: button-push 0.3s linear 1;
+  background-color: var(--memphis-pink);
+  color: white;
+}
+
+/* Memphis Zigzag Divider */
+.memphis-divider {
+  width: 100%;
+  height: 30px;
+  background: 
+    linear-gradient(135deg, var(--memphis-yellow) 25%, transparent 25%) -20px 0,
+    linear-gradient(225deg, var(--memphis-yellow) 25%, transparent 25%) -20px 0,
+    linear-gradient(315deg, var(--memphis-yellow) 25%, transparent 25%),
+    linear-gradient(45deg, var(--memphis-yellow) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-color: var(--memphis-black);
 }
 
 @media screen and (max-width: 1024px) {
   .section__title {
     text-align: center;
+  }
+  
+  .section::before,
+  .section::after {
+    display: none;
   }
 }

@@ -17,8 +17,8 @@ const Home = () => {
         <a href="#contact" className="btn">
           Hire Me
         </a>
-        <ScrollDown />
       </div>
+      <ScrollDown />
       <Shapes />
     </section>
   );
