@@ -18,7 +18,7 @@
   transition: 0.3s;
 }
 
-.blog—img,
+.blog__img,
 .blog__thumb:hover {
   transform: scale(1.1);
   transition: 0.3s ease-in-out;
@@ -46,6 +46,13 @@
 .blog__title {
   font-size: var(--h3-font-size);
   margin-bottom: 0.5rem;
+}
+
+.blog__description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
 }
 
 .blog__meta {
