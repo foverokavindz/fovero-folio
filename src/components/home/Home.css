@@ -1,400 +1,423 @@
+/* Memphis-style background for TextType */
+.memphis-bg-texttype {
+	position: relative;
+	display: inline-block;
+	margin: 0rem 0 0.5rem 0;
+	padding: 0.2rem 1rem;
+	background: var(--container-color);
+	border-radius: 1.5rem;
+	box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+	z-index: 1;
+	overflow: visible;
+	color: color-mix(in srgb, var(--text-color) 85%, transparent);
+}
+
+.memphis-bg-texttype > * {
+	position: relative;
+	z-index: 1;
+}
 /* MEMPHIS DESIGN - HOME SECTION */
 .home {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding-bottom: 5rem;
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding-bottom: 5rem;
 }
 
 /* Memphis Grid Background */
 .home::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(var(--memphis-black) 1px, transparent 1px),
-    linear-gradient(90deg, var(--memphis-black) 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.05;
-  z-index: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(var(--memphis-black) 1px, transparent 1px), linear-gradient(90deg, var(--memphis-black) 1px, transparent 1px);
+	background-size: 50px 50px;
+	opacity: 0.05;
+	z-index: 0;
 }
 
 .intro {
-  max-width: 600px;
-  text-align: center;
-  z-index: 2;
-  padding: 3rem;
-  position: relative;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	max-width: 600px;
+	text-align: center;
+	z-index: 2;
+	padding: 3rem;
+	position: relative;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* Remove corner decorations since we removed the box */
 .intro::before,
 .intro::after {
-  display: none;
+	display: none;
 }
 
 /* Profile Image Container */
 .home__img-wrapper {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 2.5rem;
+	position: relative;
+	display: inline-block;
+	margin-bottom: 2.5rem;
 }
 
 .home img {
-  border: 4px solid var(--memphis-black);
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-  width: 120px;
-  height: 120px;
+	border: 4px solid var(--memphis-black);
+	border-radius: 50%;
+	position: relative;
+	z-index: 2;
+	width: 120px;
+	height: 120px;
 }
 
 /* Rotating ring around profile */
 .home__img-wrapper::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 3px dashed var(--memphis-black);
-  border-radius: 50%;
-  animation: spin-slow 20s linear infinite;
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	right: -10px;
+	bottom: -10px;
+	border: 3px dashed var(--memphis-black);
+	border-radius: 50%;
+	animation: spin-slow 20s linear infinite;
 }
 
 /* Floating decorative dots */
 .home__img-decoration {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
 }
 
 .home__img-decoration span {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid var(--memphis-black);
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 2px solid var(--memphis-black);
 }
 
 .home__img-decoration span:nth-child(1) {
-  background: var(--memphis-teal);
-  top: 10%;
-  left: -25px;
-  animation: float-dot 3s ease-in-out infinite;
+	background: var(--memphis-teal);
+	top: 10%;
+	left: -25px;
+	animation: float-dot 3s ease-in-out infinite;
 }
 
 .home__img-decoration span:nth-child(2) {
-  background: var(--memphis-orange);
-  bottom: 20%;
-  right: -20px;
-  animation: float-dot 3s ease-in-out infinite 0.5s;
+	background: var(--memphis-orange);
+	bottom: 20%;
+	right: -20px;
+	animation: float-dot 3s ease-in-out infinite 0.5s;
 }
 
 .home__img-decoration span:nth-child(3) {
-  background: var(--memphis-purple);
-  bottom: -12px;
-  left: 30%;
-  width: 10px;
-  height: 10px;
-  animation: float-dot 3s ease-in-out infinite 1s;
+	background: var(--memphis-purple);
+	bottom: -12px;
+	left: 30%;
+	width: 10px;
+	height: 10px;
+	animation: float-dot 3s ease-in-out infinite 1s;
 }
 
 @keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes bounce-shape {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(10deg); }
+	0%,
+	100% {
+		transform: translateY(0) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-8px) rotate(10deg);
+	}
 }
 
 @keyframes float-dot {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-6px);
+	}
 }
 
 .home__name {
-  font-size: 1.75rem;
-  font-weight: var(--font-bold);
-  margin-bottom: 0.5rem;
-  font-family: var(--heading-font);
-  letter-spacing: 3px;
-  position: relative;
-  display: inline-block;
+	font-size: 2rem;
+	font-weight: var(--font-bold);
+	margin-bottom: 0.5rem;
+	font-family: var(--heading-font);
+	letter-spacing: 3px;
+	position: relative;
+	display: inline-block;
 }
 
 /* Underline decoration */
 .home__name::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--memphis-pink),
-    var(--memphis-pink) 8px,
-    var(--memphis-yellow) 8px,
-    var(--memphis-yellow) 16px,
-    var(--memphis-teal) 16px,
-    var(--memphis-teal) 24px
-  );
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: repeating-linear-gradient(90deg, var(--memphis-pink), var(--memphis-pink) 8px, var(--memphis-yellow) 8px, var(--memphis-yellow) 16px, var(--memphis-teal) 16px, var(--memphis-teal) 24px);
 }
 
 .home__education {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  font-weight: var(--font-medium);
-  display: block;
-  margin-top: 1rem;
+	font-size: 1.2rem;
+	color: var(--text-color);
+	font-weight: var(--font-medium);
+	display: block;
+	margin-top: 1rem;
 }
 
 .home__socials {
-  display: flex;
-  column-gap: 0.75rem;
-  margin: 1.5rem 0;
-  justify-content: center;
+	display: flex;
+	column-gap: 0.75rem;
+	margin: 1.5rem 0;
+	justify-content: center;
 }
 
 .home__social-link {
-  color: var(--memphis-black);
-  font-size: 1.2rem;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--memphis-black);
-  background: var(--memphis-yellow);
-  box-shadow: 3px 3px 0px var(--memphis-black);
-  transition: all 0.2s ease;
+	color: var(--memphis-black);
+	font-size: 1.2rem;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid var(--memphis-black);
+	background: var(--memphis-yellow);
+	box-shadow: 3px 3px 0px var(--memphis-black);
+	transition: all 0.2s ease;
 }
 
 .home__social-link:nth-child(2) {
-  background: var(--memphis-pink);
+	background: var(--memphis-pink);
 }
 
 .home__social-link:nth-child(3) {
-  background: var(--memphis-teal);
+	background: var(--memphis-teal);
 }
 
 .home__social-link:nth-child(4) {
-  background: var(--memphis-purple);
-  color: white;
+	background: var(--memphis-purple);
+	color: white;
 }
 
 .home__social-link:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px var(--memphis-black);
+	transform: translate(-2px, -2px);
+	box-shadow: 6px 6px 0px var(--memphis-black);
 }
 
 /* Scroll Down - Position outside of intro */
 .scroll__down {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  z-index: 10;
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: auto;
+	z-index: 10;
 }
 
 .home__scroll-name {
-  font-size: var(--small-font-size);
-  color: var(--title-color);
-  font-weight: var(--font-bold);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+	font-size: var(--small-font-size);
+	color: var(--title-color);
+	font-weight: var(--font-bold);
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
 .mouse {
-  border: var(--border-thick);
-  display: block;
-  height: 2.5rem;
-  width: 1.5rem;
-  margin: auto;
-  margin-top: 0.75rem;
-  position: relative;
-  background: var(--container-color);
+	border: var(--border-thick);
+	display: block;
+	height: 2.5rem;
+	width: 1.5rem;
+	margin: auto;
+	margin-top: 0.75rem;
+	position: relative;
+	background: var(--container-color);
 }
 
 @keyframes ani-mouse {
-  0% {
-    top: 29%;
-  }
-  15% {
-    top: 50%;
-  }
-  50% {
-    top: 50%;
-  }
-  100% {
-    top: 29%;
-  }
+	0% {
+		top: 29%;
+	}
+	15% {
+		top: 50%;
+	}
+	50% {
+		top: 50%;
+	}
+	100% {
+		top: 29%;
+	}
 }
 
 .wheel {
-  background-color: var(--memphis-pink);
-  width: 0.35rem;
-  height: 0.35rem;
-  position: absolute;
-  top: 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: ani-mouse 2s linear infinite;
+	background-color: var(--memphis-pink);
+	width: 0.35rem;
+	height: 0.35rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: ani-mouse 2s linear infinite;
 }
 
 /* MEMPHIS FLOATING SHAPES */
 .shapes {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: hidden;
 }
 
 .shape {
-  position: absolute;
-  transition: all 0.3s ease;
+	position: absolute;
+	transition: all 0.3s ease;
 }
 
 @keyframes memphis-float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-20px) rotate(5deg);
-  }
-  50% {
-    transform: translateY(0) rotate(0deg);
-  }
-  75% {
-    transform: translateY(20px) rotate(-5deg);
-  }
+	0%,
+	100% {
+		transform: translateY(0) rotate(0deg);
+	}
+	25% {
+		transform: translateY(-20px) rotate(5deg);
+	}
+	50% {
+		transform: translateY(0) rotate(0deg);
+	}
+	75% {
+		transform: translateY(20px) rotate(-5deg);
+	}
 }
 
 @keyframes memphis-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes move {
-  from {
-    left: 50%;
-    top: 50%;
-    right: 50%;
-    bottom: 50%;
-    transform: scale(0.1);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+	from {
+		left: 50%;
+		top: 50%;
+		right: 50%;
+		bottom: 50%;
+		transform: scale(0.1);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 .s1 {
-  animation: move 1s ease, memphis-float 4s ease-in-out infinite;
-  left: 2%;
-  top: 10%;
+	animation: move 1s ease, memphis-float 4s ease-in-out infinite;
+	left: 2%;
+	top: 10%;
 }
 
 .s2 {
-  animation: move 1.3s ease, memphis-float 5s ease-in-out infinite 0.5s;
-  left: 15%;
-  top: 35%;
+	animation: move 1.3s ease, memphis-float 5s ease-in-out infinite 0.5s;
+	left: 15%;
+	top: 35%;
 }
 
 .s3 {
-  animation: move 1.6s ease, memphis-float 6s ease-in-out infinite 1s;
-  left: 5%;
-  bottom: 30%;
+	animation: move 1.6s ease, memphis-float 6s ease-in-out infinite 1s;
+	left: 5%;
+	bottom: 30%;
 }
 
 .s4 {
-  animation: move 1.9s ease, memphis-float 4.5s ease-in-out infinite 0.3s;
-  left: 2%;
-  bottom: 10%;
+	animation: move 1.9s ease, memphis-float 4.5s ease-in-out infinite 0.3s;
+	left: 2%;
+	bottom: 10%;
 }
 
 .s5 {
-  animation: move 2.2s ease, memphis-float 5.5s ease-in-out infinite 0.7s;
-  left: 45%;
-  top: 7%;
+	animation: move 2.2s ease, memphis-float 5.5s ease-in-out infinite 0.7s;
+	left: 45%;
+	top: 7%;
 }
 
 .s6 {
-  animation: move 2.5s ease, memphis-float 4s ease-in-out infinite 1.2s;
-  left: 36%;
-  bottom: 10%;
+	animation: move 2.5s ease, memphis-float 4s ease-in-out infinite 1.2s;
+	left: 36%;
+	bottom: 10%;
 }
 
 .s7 {
-  animation: move 2.8s ease, memphis-float 6s ease-in-out infinite 0.4s;
-  top: 20%;
-  right: 18%;
+	animation: move 2.8s ease, memphis-float 6s ease-in-out infinite 0.4s;
+	top: 20%;
+	right: 18%;
 }
 
 .s8 {
-  animation: move 3.1s ease, memphis-float 5s ease-in-out infinite 0.9s;
-  right: 24%;
-  bottom: 20%;
+	animation: move 3.1s ease, memphis-float 5s ease-in-out infinite 0.9s;
+	right: 24%;
+	bottom: 20%;
 }
 
 .s9 {
-  animation: move 3.4s ease, memphis-float 4.5s ease-in-out infinite 1.5s;
-  right: 2%;
-  top: 10%;
+	animation: move 3.4s ease, memphis-float 4.5s ease-in-out infinite 1.5s;
+	right: 2%;
+	top: 10%;
 }
 
 .s10 {
-  animation: move 3.7s ease, memphis-float 5.5s ease-in-out infinite 0.6s;
-  top: 45%;
-  right: 11%;
+	animation: move 3.7s ease, memphis-float 5.5s ease-in-out infinite 0.6s;
+	top: 45%;
+	right: 11%;
 }
 
 .s11 {
-  animation: move 3.9s ease, memphis-float 6s ease-in-out infinite 1.1s;
-  right: 2%;
-  bottom: 10%;
+	animation: move 3.9s ease, memphis-float 6s ease-in-out infinite 1.1s;
+	right: 2%;
+	bottom: 10%;
 }
 
 .shape:hover {
-  transform: scale(1.5) rotate(180deg) !important;
-  transition: 0.5s ease;
-  cursor: pointer;
+	transform: scale(1.5) rotate(180deg) !important;
+	transition: 0.5s ease;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
-  .home__social-link {
-    font-size: 1.125rem;
-    width: 40px;
-    height: 40px;
-  }
-  
-  .intro {
-    padding: 2rem;
-    margin: 0 1rem;
-  }
+	.home__social-link {
+		font-size: 1.125rem;
+		width: 40px;
+		height: 40px;
+	}
+
+	.intro {
+		padding: 2rem;
+		margin: 0 1rem;
+	}
 }
