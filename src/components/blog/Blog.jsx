@@ -1,68 +1,61 @@
 import React from 'react';
 import './Blog.css';
-import Image1 from '../../assets/blog-1.svg';
-import Image2 from '../../assets/blog-2.svg';
-import Image3 from '../../assets/blog-3.svg';
+import messageQueue from '../../assets/messageQueue.png';
+import kubernetes from '../../assets/kubernetes.png';
 
 const blogData = [
-  {
-    id: 1,
-    category: 'Reviews',
-    title: '5 Best App Development Tool for Your Projects',
-    metaTag: '09 February, 2022',
-    author: 'Kavinda',
-    image: Image1,
-  },
-  {
-    id: 2,
-    category: 'Tutorial',
-    title: '5 Best App Development Tool for Your Projects',
-    metaTag: '07 February, 2022',
-    author: 'Kavinda',
-    image: Image2,
-  },
-  {
-    id: 3,
-    category: 'Business',
-    title: '3 Things to know about startup business',
-    metaTag: '05 February, 2022',
-    author: 'Kavinda',
-    image: Image3,
-  },
+	{
+		id: 1,
+		category: 'Explainer + Tutorial',
+		title: 'What Are Message Queues? Why Does It Matter?',
+		metaTag: '01 September, 2025',
+		author: 'Kavinda',
+		image: messageQueue,
+		url: 'https://medium.com/@kavindamadhuranga74/what-are-message-queues-why-does-it-matter-4c016e95a8f8',
+	},
+	{
+		id: 2,
+		category: 'Explainer + Tutorial',
+		title: 'From Zero to Kubernetes: Building Your First Self-Managed Cluster (Complete Guide)',
+		metaTag: 'Comming Soon',
+		author: 'Kavinda',
+		image: kubernetes,
+		url: '',
+	},
 ];
 
 const Blog = () => {
-  return (
-    <section className="blog container section" id="blog">
-      <h2 className="section__title">Latest Posts</h2>
+	return (
+		<section className="blog container section" id="blog">
+			<h2 className="section__title">Latest Posts</h2>
 
-      <div className="blog__container grid">
-        {blogData.map(({ id, category, title, metaTag, author, image }) => {
-          return (
-            <div className="blog__card" key={id}>
-              <a href="">
-                <span className="blog__category">{category}</span>
-              </a>
-              <div className="blog__thumb">
-                <a href="">
-                  <img src={image} className="blog__img" />
-                </a>
-              </div>
-              <div className="blog__details">
-                <h3 className="blog__title">{title}</h3>
+			<div className="blog__container grid">
+				{blogData.map(({ id, category, title, metaTag, author, image, url }) => {
+					return (
+						<div className="blog__card" key={id}>
+							<a href={url} className="blog__category-link" target="_blank">
+								<span className="blog__category">{category}</span>
+							</a>
+							<div className="blog__thumb">
+								<a href={url} target="_blank">
+									<img src={image} className="blog__img" />
+								</a>
+							</div>
+							<div className="blog__details">
+								<h3 className="blog__title">{title}</h3>
 
-                <div className="blog__meta">
-                  <span>{metaTag}</span>
-                  <span className="blog__dot">.</span>
-                  <span>{author}</span>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  );
+								<div className="blog__meta">
+									<span>{metaTag}</span>
+									<span className="blog__dot">.</span>
+									<span>{author}</span>
+								</div>
+							</div>
+						</div>
+					);
+				})}
+			</div>
+		</section>
+	);
 };
 
 export default Blog;

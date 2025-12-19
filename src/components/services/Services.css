@@ -1,48 +1,48 @@
 .services__container {
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1.875rem;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 1.875rem;
 }
 
 .services__card {
-  text-align: center;
-  padding: 1.875rem;
-  border-radius: var(--border-radius);
-  background-color: var(--container-color);
-  transition: all 0.3s ease-in-out;
+	text-align: center;
+	padding: 1.875rem;
+	border-radius: var(--border-radius);
+	background-color: var(--container-color);
+	transition: all 0.3s ease-in-out;
 }
 
 .services__card:hover {
-  transform: translateY(-10px);
-}
-
-.services__card:nth-child(1) {
-  background-color: var(--sky-blue-color);
-  box-shadow: 0px 5px 20px 0px rgba(108, 108, 229 / 50%);
+	transform: translateY(-10px);
 }
 
 .services__card:nth-child(2) {
-  background-color: var(--canary-yellow-color);
-  box-shadow: 0px 5px 20px 0px rgba(249, 215, 76 / 50%);
+	background-color: var(--sky-blue-color);
+	box-shadow: 0px 5px 20px 0px rgba(108, 108, 229 / 50%);
+}
+
+.services__card:nth-child(1) {
+	background-color: var(--canary-yellow-color);
+	box-shadow: 0px 5px 20px 0px rgba(249, 215, 76 / 50%);
 }
 
 .services__card:nth-child(3) {
-  background-color: var(--salmon-pink-color);
-  box-shadow: 0px 5px 20px 0px rgba(249, 123, 139 / 50%);
+	background-color: var(--salmon-pink-color);
+	box-shadow: 0px 5px 20px 0px rgba(249, 123, 139 / 50%);
 }
 
 .services__img {
-  margin-bottom: 1.25rem;
-  height: 80px;
+	margin-bottom: 1.25rem;
+	height: 80px;
 }
 
 .services__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: 1rem;
-  color: var(--title-color);
+	font-size: var(--h3-font-size);
+	margin-bottom: 1rem;
+	color: var(--title-color);
 }
 
 .services__description {
-  color: var(--text-color);
+	color: var(--text-color);
 }
 
 /* .services__card:nth-child(2) .services__title {
@@ -62,21 +62,21 @@
 } */
 
 @media screen and (max-width: 1024px) {
-  .services__container {
-    grid-template-columns: repeat(2, 330px);
-    justify-content: center;
-    row-gap: 1.875rem;
-  }
+	.services__container {
+		grid-template-columns: repeat(2, 330px);
+		justify-content: center;
+		row-gap: 1.875rem;
+	}
 }
 
 @media screen and (max-width: 768px) {
-  .services__container {
-    grid-template-columns: 310px;
-  }
+	.services__container {
+		grid-template-columns: 310px;
+	}
 }
 
 @media screen and (max-width: 350px) {
-  .services__container {
-    grid-template-columns: 1fr;
-  }
+	.services__container {
+		grid-template-columns: 1fr;
+	}
 }
