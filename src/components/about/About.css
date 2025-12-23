@@ -10,7 +10,7 @@
 .about__expertise-title {
 	font-size: 1.1rem;
 	font-weight: 700;
-	color: var(--memphis-black);
+	color: var(--title-color);
 	margin-bottom: 0.7rem;
 	letter-spacing: 0.5px;
 }

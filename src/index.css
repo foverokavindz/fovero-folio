@@ -234,7 +234,7 @@ img {
 	font-family: var(--heading-font);
 	letter-spacing: 3px;
 	display: inline-block;
-	background: linear-gradient(180deg, transparent 60%, var(--memphis-yellow) 60%);
+	background: linear-gradient(180deg, transparent 85%, var(--memphis-yellow) 85%);
 	padding: 0 10px;
 }
 

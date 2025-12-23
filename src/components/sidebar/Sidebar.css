@@ -1,201 +1,207 @@
 /* MEMPHIS DESIGN - SIDEBAR */
 .aside {
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: var(--memphis-cream);
-  border-right: var(--border-thick);
-  padding: 2.5rem 1.5rem;
-  width: 110px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 10;
-  transition: 0.3s;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: var(--memphis-cream);
+	border-right: var(--border-thick);
+	padding: 2.5rem 1.5rem;
+	width: 110px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 10;
+	transition: 0.3s;
 }
 
 .nav__list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.75rem;
 }
 
 .nav__link {
-  font-size: 1.4rem;
-  color: var(--memphis-black);
-  font-weight: var(--font-bold);
-  transition: 0.2s ease;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid transparent;
-  background: transparent;
+	font-size: 1.4rem;
+	color: var(--memphis-black);
+	font-weight: var(--font-bold);
+	transition: 0.2s ease;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid transparent;
+	background: transparent;
 }
 
 .nav__link:hover {
-  background: var(--memphis-pink) !important;
-  border: var(--border-medium);
-  box-shadow: 3px 3px 0px var(--memphis-black);
-  color: var(--memphis-black) !important;
+	background: var(--memphis-pink) !important;
+	border: var(--border-medium);
+	box-shadow: 3px 3px 0px var(--memphis-black);
+	color: var(--memphis-black) !important;
 }
 
 .nav__link:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--memphis-black);
+	transform: translate(2px, 2px);
+	box-shadow: 1px 1px 0px var(--memphis-black);
 }
 
 .nav__link:visited {
-  color: var(--memphis-black);
+	color: var(--memphis-black);
+}
+
+.nav__footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .copyright {
-  font-size: var(--smaller-font-size);
-  color: var(--memphis-black);
-  transform: rotate(-180deg);
-  writing-mode: vertical-rl;
-  font-weight: var(--font-bold);
-  letter-spacing: 1px;
-  opacity: 0.7;
+	font-size: var(--smaller-font-size);
+	color: var(--memphis-black);
+	transform: rotate(-180deg);
+	writing-mode: vertical-rl;
+	font-weight: var(--font-bold);
+	letter-spacing: 1px;
+	opacity: 0.7;
 }
 
 .sidebar__logo {
-  width: 80px;
-  height: auto;
-  background-size: cover;
-  background-position: center;
-  border: var(--border-medium);
-  padding: 5px;
-  background: white;
+	width: 80px;
+	height: auto;
+	background-size: cover;
+	background-position: center;
+	border: var(--border-medium);
+	padding: 5px;
+	background: white;
 }
 
 .nav__toggle {
-  position: fixed;
-  top: 1.25rem;
-  left: 1.875rem;
-  cursor: pointer;
-  height: 45px;
-  width: 50px;
-  background-color: var(--memphis-teal);
-  border: var(--border-thick);
-  box-shadow: var(--shadow-sm);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  transition: 0.2s;
+	position: fixed;
+	top: 1.25rem;
+	left: 1.875rem;
+	cursor: pointer;
+	height: 45px;
+	width: 50px;
+	background-color: var(--memphis-teal);
+	border: var(--border-thick);
+	box-shadow: var(--shadow-sm);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	transition: 0.2s;
 }
 
 .nav__toggle:hover {
-  background-color: var(--memphis-pink);
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px var(--memphis-black);
+	background-color: var(--memphis-pink);
+	transform: translate(-2px, -2px);
+	box-shadow: 6px 6px 0px var(--memphis-black);
 }
 
 /* Burger Icon - Memphis Style */
 .burger-icon {
-  width: 24px;
-  height: 18px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	width: 24px;
+	height: 18px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .burger-bar {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: var(--memphis-black);
-  transition: all 0.3s ease-in-out;
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: var(--memphis-black);
+	transition: all 0.3s ease-in-out;
 }
 
 /* Animation for the burger to X transformation */
 .nav__toggle-open .burger-icon .burger-bar:first-child {
-  transform: translateY(7.5px) rotate(45deg);
+	transform: translateY(7.5px) rotate(45deg);
 }
 
 .nav__toggle-open .burger-icon .burger-bar:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
+	opacity: 0;
+	transform: scaleX(0);
 }
 
 .nav__toggle-open .burger-icon .burger-bar:last-child {
-  transform: translateY(-7.5px) rotate(-45deg);
+	transform: translateY(-7.5px) rotate(-45deg);
 }
 
 @media screen and (max-width: 1024px) {
-  .aside {
-    left: -110px;
-  }
+	.aside {
+		left: -110px;
+	}
 
-  .nav__toggle {
-    display: flex;
-  }
+	.nav__toggle {
+		display: flex;
+	}
 
-  .nav__toggle-open {
-    left: 140px;
-  }
+	.nav__toggle-open {
+		left: 140px;
+	}
 
-  .show-menu {
-    left: 0;
-  }
+	.show-menu {
+		left: 0;
+	}
 }
 
 @media screen and (max-width: 768px) {
-  .nav__toggle {
-    top: 1.25rem;
-    left: 1.25rem;
-  }
+	.nav__toggle {
+		top: 1.25rem;
+		left: 1.25rem;
+	}
 
-  .nav__toggle-open {
-    left: 130px;
-  }
+	.nav__toggle-open {
+		left: 130px;
+	}
 }
 
 /* Dark Mode Styles for Sidebar */
 .dark-theme .aside {
-  background: var(--container-color);
-  border-color: var(--memphis-pink);
+	background: var(--container-color);
+	border-color: var(--memphis-pink);
 }
 
 .dark-theme .nav__link {
-  color: #F8F8F8;
+	color: #f8f8f8;
 }
 
 .dark-theme .nav__link:hover {
-  background: var(--memphis-pink) !important;
-  border-color: #F8F8F8;
-  box-shadow: 3px 3px 0px var(--memphis-pink);
-  color: #1A1A2E !important;
+	background: var(--memphis-pink) !important;
+	border-color: #f8f8f8;
+	box-shadow: 3px 3px 0px var(--memphis-pink);
+	color: #1a1a2e !important;
 }
 
 .dark-theme .nav__link:visited {
-  color: #F8F8F8;
+	color: #f8f8f8;
 }
 
 .dark-theme .copyright {
-  color: #F8F8F8;
+	color: #f8f8f8;
 }
 
 .dark-theme .sidebar__logo {
-  border-color: var(--memphis-pink);
-  background: transparent;
+	border-color: var(--memphis-pink);
+	background: transparent;
 }
 
 .dark-theme .nav__toggle {
-  background-color: var(--memphis-pink);
-  border-color: #F8F8F8;
-  box-shadow: 4px 4px 0px #F8F8F8;
+	background-color: var(--memphis-pink);
+	border-color: #f8f8f8;
+	box-shadow: 4px 4px 0px #f8f8f8;
 }
 
 .dark-theme .nav__toggle:hover {
-  background-color: var(--memphis-teal);
-  box-shadow: 6px 6px 0px #F8F8F8;
+	background-color: var(--memphis-teal);
+	box-shadow: 6px 6px 0px #f8f8f8;
 }
 
 .dark-theme .burger-bar {
-  background-color: #1A1A2E;
+	background-color: #1a1a2e;
 }
