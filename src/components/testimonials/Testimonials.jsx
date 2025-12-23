@@ -33,7 +33,7 @@ const reviewData = [
 const Testimonials = () => {
 	return (
 		<section className="testionials container section" id="testimonials">
-			<h2 className="section__title">Clients and Reviews</h2>
+			<h2 className="section__title">Recommendation</h2>
 			<h4
 				className=""
 				style={{

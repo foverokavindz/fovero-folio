@@ -19,7 +19,7 @@ function App() {
 						<TechStack />
 						<Resume />
 						<Portfolio />
-						<Pricing />
+						{/* <Pricing /> */}
 						<Blog />
 						<Testimonials />
 						<Contact />

@@ -83,7 +83,7 @@
 	left: -10px;
 	right: -10px;
 	bottom: -10px;
-	border: 3px dashed var(--memphis-black);
+	border: 3px dashed var(--border-color);
 	border-radius: 50%;
 	animation: spin-slow 20s linear infinite;
 }
@@ -419,5 +419,25 @@
 	.intro {
 		padding: 2rem;
 		margin: 0 1rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.s2 {
+		animation: move 1.3s ease, memphis-float 5s ease-in-out infinite 0.5s;
+		left: 5%;
+		top: 25%;
+	}
+
+	.s7 {
+		animation: move 2.8s ease, memphis-float 6s ease-in-out infinite 0.4s;
+		top: 30%;
+		right: 5%;
+	}
+
+	.s10 {
+		animation: move 3.7s ease, memphis-float 5.5s ease-in-out infinite 0.6s;
+		top: 50%;
+		right: 2%;
 	}
 }
