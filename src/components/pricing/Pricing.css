@@ -1,19 +1,65 @@
+/* MEMPHIS DESIGN - PRICING SECTION */
 .pricing__container {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  gap: 2rem;
 }
 
 .pricing__item {
-  padding: 1.875rem 2.5rem;
+  padding: 2.5rem;
   background-color: var(--container-color);
   text-align: center;
-  border-radius: var(--border-radius);
+  border: var(--border-thick);
   box-shadow: var(--shadow);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.pricing__item:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--memphis-black);
+}
+
+/* Memphis decorative elements */
+.pricing__item::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  background: var(--memphis-yellow);
+  border: var(--border-medium);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.pricing__item:nth-child(2)::before {
+  background: var(--memphis-pink);
+}
+
+.pricing__item:nth-child(3)::before {
+  background: var(--memphis-teal);
+}
+
+.pricing__icon {
+  font-size: 3rem;
+  color: var(--memphis-pink);
+}
+
+.pricing__item:nth-child(2) .pricing__icon {
+  color: var(--memphis-teal);
+}
+
+.pricing__item:nth-child(3) .pricing__icon {
+  color: var(--memphis-yellow);
 }
 
 .pricing__plan {
-  margin: 1.25rem 0;
+  margin: 1.5rem 0;
   font-size: var(--h2-font-size);
+  font-family: var(--heading-font);
+  letter-spacing: 3px;
 }
 
 .pricing__tittle,
@@ -24,6 +70,30 @@
 .price {
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
+  font-family: var(--heading-font);
+  color: var(--memphis-black);
+  position: relative;
+  display: inline-block;
+}
+
+/* Memphis underline */
+.price::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--memphis-yellow);
+  z-index: -1;
+}
+
+.pricing__item:nth-child(2) .price::after {
+  background: var(--memphis-pink);
+}
+
+.pricing__item:nth-child(3) .price::after {
+  background: var(--memphis-teal);
 }
 
 .price em {
@@ -37,39 +107,44 @@
   font-size: var(--normal-font-size);
   font-weight: 400;
   margin-left: 0.75rem;
+  font-family: var(--body-font);
 }
 
 .pricing__item .btn {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 }
+
 .pricing__item.best {
-  padding: 3.4rem 2.5rem;
+  padding: 3.5rem 2.5rem;
   position: relative;
   z-index: 1;
+  background: var(--memphis-yellow);
 }
 
 .badge {
   position: absolute;
   left: 0;
   top: 2.8rem;
-  color: #fff;
-  background-color: #6c6ce5;
+  color: var(--memphis-black);
+  background-color: var(--memphis-pink);
+  border: var(--border-medium);
   transform: rotate(-90deg);
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 1rem;
   font-size: var(--small-font-size);
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 1024px) {
   .pricing__container {
     grid-template-columns: repeat(2, 330px);
     justify-content: center;
-    gap: 1.875rem;
+    gap: 2rem;
   }
 
   .pricing__item.best {
-    padding: 1.875rem 2.5rem;
+    padding: 2.5rem;
   }
 }
 

@@ -1,71 +1,117 @@
+/* MEMPHIS DESIGN - SERVICES SECTION */
 .services__container {
 	grid-template-columns: repeat(3, 1fr);
-	column-gap: 1.875rem;
+	column-gap: 2rem;
 }
 
 .services__card {
 	text-align: center;
-	padding: 1.875rem;
-	border-radius: var(--border-radius);
+	padding: 2.5rem 2rem;
+	border: var(--border-thick);
 	background-color: var(--container-color);
-	transition: all 0.3s ease-in-out;
+	transition: all 0.2s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Memphis corner decoration */
+.services__card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	background: var(--memphis-black);
+}
+
+.services__card::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-bottom: 40px solid var(--memphis-black);
+	transition: all 0.3s ease;
 }
 
 .services__card:hover {
-	transform: translateY(-10px);
+	transform: translate(-6px, -6px);
+	box-shadow: 12px 12px 0px var(--memphis-black);
+}
+
+.services__card:hover::after {
+	border-left-width: 60px;
+	border-bottom-width: 60px;
 }
 
 .services__card:nth-child(2) {
-	background-color: var(--sky-blue-color);
-	box-shadow: 0px 5px 20px 0px rgba(108, 108, 229 / 50%);
+	background-color: var(--memphis-teal);
+	box-shadow: var(--shadow-lg);
 }
 
 .services__card:nth-child(1) {
-	background-color: var(--canary-yellow-color);
-	box-shadow: 0px 5px 20px 0px rgba(249, 215, 76 / 50%);
+	background-color: var(--memphis-yellow);
+	box-shadow: var(--shadow-lg);
 }
 
 .services__card:nth-child(3) {
-	background-color: var(--salmon-pink-color);
-	box-shadow: 0px 5px 20px 0px rgba(249, 123, 139 / 50%);
+	background-color: var(--memphis-pink);
+	box-shadow: var(--shadow-lg);
+}
+
+/* Memphis pattern overlay */
+.services__card:nth-child(1)::before {
+	background: repeating-linear-gradient(45deg, var(--memphis-black), var(--memphis-black) 2px, transparent 2px, transparent 8px);
+	width: 100%;
+	height: 8px;
+	top: auto;
+	bottom: 10px;
+}
+
+.services__card:nth-child(2)::before {
+	background: radial-gradient(var(--memphis-black) 20%, transparent 20%);
+	background-size: 10px 10px;
+	width: 100%;
+	height: 10px;
+	top: auto;
+	bottom: 10px;
+}
+
+.services__card:nth-child(3)::before {
+	background: repeating-linear-gradient(90deg, var(--memphis-black), var(--memphis-black) 3px, transparent 3px, transparent 10px);
+	width: 100%;
+	height: 10px;
+	top: auto;
+	bottom: 10px;
 }
 
 .services__img {
-	margin-bottom: 1.25rem;
-	height: 80px;
+	margin-bottom: 1.5rem;
+	height: 90px;
+	filter: drop-shadow(3px 3px 0px var(--memphis-black));
 }
 
 .services__title {
-	font-size: var(--h3-font-size);
+	font-size: var(--h2-font-size);
 	margin-bottom: 1rem;
-	color: var(--title-color);
+	color: var(--memphis-black);
+	font-family: var(--heading-font);
+	letter-spacing: 2px;
 }
 
 .services__description {
-	color: var(--text-color);
+	color: var(--memphis-black);
+	font-weight: var(--font-medium);
 }
-
-/* .services__card:nth-child(2) .services__title {
-  color: var(--title-color);
-}
-
-.services__card:nth-child(2) .services__description {
-  color: var(--text-color);
-}
-
-.services__card:nth-child(1) .services__title {
-  color: var(--title-color);
-}
-
-.services__card:nth-child(1) .services__description {
-  color: var(--text-color);
-} */
 
 @media screen and (max-width: 1024px) {
 	.services__container {
 		grid-template-columns: repeat(2, 330px);
 		justify-content: center;
-		row-gap: 1.875rem;
+		row-gap: 2rem;
 	}
 }
 

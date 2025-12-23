@@ -1,61 +1,115 @@
+/* MEMPHIS DESIGN - RESUME SECTION */
 .resume__container {
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 1.875rem;
+  column-gap: 2rem;
 }
 
 .timeline {
   background-color: var(--container-color);
-  padding: 1.875rem;
-  border-radius: var(--border-radius);
+  padding: 2rem;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-lg);
   position: relative;
-  box-shadow: var(--shadow);
+}
+
+/* Memphis decorative corner */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background: var(--memphis-yellow);
+  border: var(--border-thick);
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  background: var(--memphis-pink);
+  border: var(--border-medium);
+  border-radius: 50%;
 }
 
 .timeline__item {
   position: relative;
-  padding-left: 3.125rem;
-  padding-bottom: 3.125rem;
+  padding-left: 3.5rem;
+  padding-bottom: 3rem;
 }
 
 .timeline__item:last-child {
   padding-bottom: 0;
 }
+
+/* Memphis zigzag timeline line */
 .timeline__item::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0.25rem;
-  width: 1px;
+  left: 0.35rem;
+  width: 4px;
   height: 100%;
-  background-color: var(--first-color);
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--memphis-teal) 0px,
+    var(--memphis-teal) 10px,
+    var(--memphis-yellow) 10px,
+    var(--memphis-yellow) 20px,
+    var(--memphis-pink) 20px,
+    var(--memphis-pink) 30px
+  );
 }
 
 .timeline .icon-briefcase,
 .timeline .icon-graduation {
   position: absolute;
-  left: -0.4375rem;
+  left: -0.6rem;
   top: 0;
   font-size: var(--h2-font-size);
-  color: var(--first-color);
-  background-color: var(--container-color);
-  padding: 0.4375rem;
+  color: var(--memphis-black);
+  background-color: var(--memphis-yellow);
+  border: var(--border-medium);
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline .icon-graduation {
+  background-color: var(--memphis-pink);
 }
 
 .timeline__date {
-  color: #8b88b1;
+  color: var(--memphis-purple);
   font-size: var(--small-font-size);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .timeline__title {
   font-size: var(--h3-font-size);
+  font-family: var(--heading-font);
+  letter-spacing: 2px;
   margin: 0.5rem 0;
 }
 
+.timeline__text {
+  line-height: 1.8;
+}
+
 @media screen and (max-width: 1024px) {
-  .reesume__container {
+  .resume__container {
     grid-template-columns: 450px;
     justify-content: center;
-    row-gap: 1.875rem;
+    row-gap: 2rem;
   }
 
   .timeline__item::before {
@@ -67,7 +121,7 @@
   .resume__container {
     grid-template-columns: 450px;
     justify-content: center;
-    row-gap: 1.875rem;
+    row-gap: 2rem;
   }
 }
 
@@ -79,8 +133,8 @@
 
 @media screen and (max-width: 350px) {
   .timeline__item {
-    padding-left: 1.875rem;
-    padding-bottom: 1.875rem;
+    padding-left: 2.5rem;
+    padding-bottom: 2rem;
   }
 
   .timeline__item::before {
@@ -89,7 +143,9 @@
 
   .timeline .icon-briefcase,
   .timeline .icon-graduation {
-    left: -9px;
+    left: -12px;
+    width: 35px;
+    height: 35px;
   }
 
   .timeline__text {

@@ -7,11 +7,11 @@ const expData = [
 		id: 1,
 		category: 'education',
 		icon: 'icon-graduation',
-		year: '2021 - 2025',
+		year: '2021 - present',
 		title: 'Bachelors of ICT in Software Technology',
 		desc: (
 			<span>
-				University of Sri Jayewardenepura <br /> GPA - 3.55
+				University of Sri Jayewardenepura <br /> GPA - 3.55/4.00 <br /> (Secound Upper Class Honors)
 			</span>
 		),
 	},
@@ -45,8 +45,9 @@ const expData = [
 		icon: 'icon-briefcase',
 		year: '2025 May - Present',
 		title: 'SE Intern @ Creative Software',
-		desc: 'Experienced in architecting automated web scraping systems and containerized microservices. My work centers on extending system capabilities, designing intuitive management UIs, and building robust APIs that bridge complex data with seamless user experiences.',
+		desc: 'Experienced in developing automated web scraping systems and containerized microservices. My work centers on extending system capabilities, designing intuitive management UIs, and building robust APIs that bridge complex data with seamless user experiences.',
 	},
+
 	{
 		id: 5,
 		category: 'experience',
@@ -60,12 +61,8 @@ const expData = [
 		category: 'experience',
 		icon: 'icon-briefcase',
 		year: '2023 - 2024',
-		title: 'Web Developer (Wordpress)',
-		desc: (
-			<span>
-				Find X pvt LTD <br /> Worked remotely, Designed and built user-friendly websites, and landing pages using WordPress and Elementor.
-			</span>
-		),
+		title: 'Web Designer @ Find X (lk)',
+		desc: 'Designed and built user-friendly websites, and landing pages using WordPress and Elementor.',
 	},
 ];
 

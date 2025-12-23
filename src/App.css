@@ -1,9 +1,62 @@
+/* MEMPHIS DESIGN - MAIN APP STYLES */
 .main {
   margin-left: 110px;
+  position: relative;
+}
+
+/* Memphis floating decorations */
+
+
+@keyframes memphis-rotate {
+  from {
+    transform: rotate(15deg);
+  }
+  to {
+    transform: rotate(375deg);
+  }
+}
+
+@keyframes memphis-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Selection styling */
+::selection {
+  background: var(--memphis-yellow);
+  color: var(--memphis-black);
+}
+
+/* Scrollbar styling - Memphis */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--memphis-cream);
+  border-left: 3px solid var(--memphis-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--memphis-pink);
+  border: 2px solid var(--memphis-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--memphis-yellow);
 }
 
 @media screen and (max-width: 1024px) {
   .main {
     margin-left: 0;
+  }
+  
+  .main::before,
+  .main::after {
+    display: none;
   }
 }

@@ -1,163 +1,267 @@
 import React from 'react';
 
+// Memphis Design Shapes Component - Tech Stack Theme
 const Shapes = () => {
   return (
     <div className="shapes">
+      {/* TypeScript Logo */}
       <svg
-        width="27"
-        height="29"
+        width="40"
+        height="40"
         className="shape s1"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M21.15625.60099c4.37954 3.67487 6.46544 9.40612 5.47254 15.03526-.9929 5.62915-4.91339 10.30141-10.2846 12.25672-5.37122 1.9553-11.3776.89631-15.75715-2.77856l2.05692-2.45134c3.50315 2.93948 8.3087 3.78663 12.60572 2.22284 4.297-1.5638 7.43381-5.30209 8.22768-9.80537.79387-4.50328-.8749-9.08872-4.37803-12.02821L21.15625.60099z"
-          fill="#FFD15C"
-          fillRule="evenodd"
-        />
+        <rect x="2" y="2" width="46" height="46" fill="#3178C6" stroke="#1A1A2E" strokeWidth="3"/>
+        <text x="10" y="38" fontSize="25" fontWeight="bold" fontFamily="Arial, sans-serif" fill="#FFF">TS</text>
       </svg>
 
+      {/* React Logo */}
       <svg
-        width="26"
-        height="26"
+        width="55"
+        height="50"
         className="shape s2"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z"
-          stroke="#FF4C60"
-          strokeWidth="3"
-          fill="none"
-          fillRule="evenodd"
-        />
+        <ellipse cx="27.5" cy="25" rx="24" ry="9" fill="none" stroke="#61DAFB" strokeWidth="3"/>
+        <ellipse cx="27.5" cy="25" rx="24" ry="9" fill="none" stroke="#61DAFB" strokeWidth="3" transform="rotate(60 27.5 25)"/>
+        <ellipse cx="27.5" cy="25" rx="24" ry="9" fill="none" stroke="#61DAFB" strokeWidth="3" transform="rotate(120 27.5 25)"/>
+        <circle cx="27.5" cy="25" r="5" fill="#61DAFB"/>
       </svg>
 
+      {/* Database Logo */}
       <svg
-        width="30"
-        height="25"
+        width="45"
+        height="52"
         className="shape s3"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M.1436 8.9282C3.00213 3.97706 8.2841.92763 14.00013.92796c5.71605.00032 10.9981 3.04992 13.85641 8 2.8583 4.95007 2.8584 11.0491-.00014 16.00024l-2.77128-1.6c2.28651-3.96036 2.28631-8.84002.00011-12.8002-2.2862-3.96017-6.5124-6.40017-11.08513-6.4-4.57271.00018-8.79872 2.43984-11.08524 6.4002l-2.77128-1.6z"
-          fill="#44D7B6"
-          fillRule="evenodd"
-        />
+        <ellipse cx="22.5" cy="12" rx="18" ry="8" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="3"/>
+        <rect x="4.5" y="12" width="36" height="30" fill="#00D4AA" stroke="none"/>
+        <line x1="4.5" y1="12" x2="4.5" y2="42" stroke="#1A1A2E" strokeWidth="3"/>
+        <line x1="40.5" y1="12" x2="40.5" y2="42" stroke="#1A1A2E" strokeWidth="3"/>
+        <ellipse cx="22.5" cy="42" rx="18" ry="8" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="3"/>
+        <ellipse cx="22.5" cy="24" rx="18" ry="6" fill="none" stroke="#1A1A2E" strokeWidth="2" strokeDasharray="4 3"/>
       </svg>
 
+      {/* Docker Logo (Whale with containers) */}
       <svg
-        width="15"
-        height="23"
+        width="60"
+        height="45"
         className="shape s4"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          transform="rotate(30 9.86603 10.13397)"
-          x="7"
-          width="3"
-          height="25"
-          rx="1.5"
-          fill="#FFD15C"
-          fillRule="evenodd"
+        {/* Whale body */}
+        <path
+          d="M10 28 Q5 28 5 24 L5 22 Q5 18 12 18 L48 18 Q52 18 52 22 L52 28 Q52 35 40 38 Q30 40 20 38 Q12 36 10 28"
+          fill="#2496ED"
+          stroke="#1A1A2E"
+          strokeWidth="2"
         />
+        {/* Containers */}
+        <rect x="12" y="20" width="7" height="6" fill="#FFF" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="21" y="20" width="7" height="6" fill="#FFF" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="30" y="20" width="7" height="6" fill="#FFF" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="39" y="20" width="7" height="6" fill="#FFF" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="21" y="12" width="7" height="6" fill="#FFF" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="30" y="12" width="7" height="6" fill="#FFF" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="30" y="4" width="7" height="6" fill="#FFF" stroke="#1A1A2E" strokeWidth="1"/>
+        {/* Eye */}
+        <circle cx="8" cy="24" r="2" fill="#1A1A2E"/>
       </svg>
 
       <svg
-        width="15"
-        height="23"
+        width="48"
+        height="48"
+        className="shape s5"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 48 48"
+      >
+        {/* Left angle bracket */}
+        <polyline
+          points="20,12 9,24 20,36"
+          fill="none"
+          stroke="#9B59B6"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Slash */}
+        <line
+          x1="23" y1="36" x2="32" y2="12"
+          stroke="#9B59B6"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+        />
+        {/* Right angle bracket */}
+        <polyline
+          points="28,12 39,24 28,36"
+          fill="none"
+          stroke="#9B59B6"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Outline for Memphis style */}
+        <polyline
+          points="20,12 9,24 20,36"
+          fill="none"
+          stroke="#1A1A2E"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <line
+          x1="23" y1="36" x2="32" y2="12"
+          stroke="#1A1A2E"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+        />
+        <polyline
+          points="28,12 39,24 28,36"
+          fill="none"
+          stroke="#1A1A2E"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+
+            <svg
+        width="40"
+        height="40"
         className="shape s5"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          transform="rotate(30 9.86603 10.13397)"
-          x="7"
-          width="3"
-          height="25"
-          rx="1.5"
-          fill="#6C6CE5"
-          fillRule="evenodd"
-        />
+        <rect x="2" y="2" width="46" height="46" fill="#601180FF" stroke="#1A1A2E" strokeWidth="3"/>
+        <text x="7" y="35" fontSize="15" fontWeight="bold" fontFamily="Arial, sans-serif" fill="#FFF">.NET</text>
       </svg>
 
+      {/* DSA Logo (Tree/Graph structure) */}
       <svg
-        width="49"
-        height="17"
+        width="55"
+        height="50"
         className="shape s6"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g fill="#FF4C60" fillRule="evenodd">
-          <path d="M.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C23.1175 5.50106 25.5 10.78292 25.5 16.5H23c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0C4.90625 7.70116 3 11.92697 3 16.5H.5z" />
-          <path d="M23.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C46.1175 5.50106 48.5 10.78292 48.5 16.5H46c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0-3.09375 2.28651-5 6.51232-5 11.08535h-2.5z" />
-        </g>
+        {/* Tree lines */}
+        <line x1="27.5" y1="12" x2="15" y2="30" stroke="#1A1A2E" strokeWidth="3"/>
+        <line x1="27.5" y1="12" x2="40" y2="30" stroke="#1A1A2E" strokeWidth="3"/>
+        <line x1="15" y1="30" x2="8" y2="45" stroke="#1A1A2E" strokeWidth="3"/>
+        <line x1="15" y1="30" x2="22" y2="45" stroke="#1A1A2E" strokeWidth="3"/>
+        <line x1="40" y1="30" x2="33" y2="45" stroke="#1A1A2E" strokeWidth="3"/>
+        <line x1="40" y1="30" x2="47" y2="45" stroke="#1A1A2E" strokeWidth="3"/>
+        {/* Nodes */}
+        <circle cx="27.5" cy="10" r="7" fill="#FF6B9D" stroke="#1A1A2E" strokeWidth="2"/>
+        <circle cx="15" cy="28" r="6" fill="#FFE156" stroke="#1A1A2E" strokeWidth="2"/>
+        <circle cx="40" cy="28" r="6" fill="#FFE156" stroke="#1A1A2E" strokeWidth="2"/>
+        <circle cx="8" cy="44" r="5" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="2"/>
+        <circle cx="22" cy="44" r="5" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="2"/>
+        <circle cx="33" cy="44" r="5" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="2"/>
+        <circle cx="47" cy="44" r="5" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="2"/>
       </svg>
 
+      {/* Mechanical Keyboard Icon - Improved */}
       <svg
-        width="26"
-        height="26"
+        width="54"
+        height="28"
         className="shape s7"
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 54 28"
       >
-        <path
-          d="M13 22.6459L2.42705 1.5h21.1459L13 22.6459z"
-          stroke="#FFD15C"
-          strokeWidth="3"
-          fill="none"
-          fillRule="evenodd"
-        />
+        {/* Keyboard body */}
+        <rect x="2" y="4" width="50" height="20" rx="4" fill="#FFF8E7" stroke="#1A1A2E" strokeWidth="2"/>
+        {/* Top row (Esc, F1-F4) */}
+        <rect x="5" y="7" width="4" height="4" rx="1" fill="#FF6B9D" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="10" y="7" width="4" height="4" rx="1" fill="#FFE156" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="15" y="7" width="4" height="4" rx="1" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="20" y="7" width="4" height="4" rx="1" fill="#9B59B6" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="25" y="7" width="4" height="4" rx="1" fill="#FF8C42" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="30" y="7" width="4" height="4" rx="1" fill="#4ECDC4" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="35" y="7" width="4" height="4" rx="1" fill="#FF6B9D" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="40" y="7" width="4" height="4" rx="1" fill="#FFE156" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="45" y="7" width="4" height="4" rx="1" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="1"/>
+        {/* Home row (QWERTY) */}
+        <rect x="7" y="13" width="4" height="4" rx="1" fill="#9B59B6" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="12" y="13" width="4" height="4" rx="1" fill="#FF8C42" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="17" y="13" width="4" height="4" rx="1" fill="#4ECDC4" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="22" y="13" width="4" height="4" rx="1" fill="#FF6B9D" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="27" y="13" width="4" height="4" rx="1" fill="#FFE156" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="32" y="13" width="4" height="4" rx="1" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="37" y="13" width="4" height="4" rx="1" fill="#9B59B6" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="42" y="13" width="4" height="4" rx="1" fill="#FF8C42" stroke="#1A1A2E" strokeWidth="1"/>
+        {/* Bottom row (Ctrl, Alt, Space, etc.) */}
+        <rect x="10" y="19" width="4" height="4" rx="1" fill="#FFE156" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="15" y="19" width="4" height="4" rx="1" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="20" y="19" width="12" height="4" rx="2" fill="#1A1A2E" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="33" y="19" width="4" height="4" rx="1" fill="#FF6B9D" stroke="#1A1A2E" strokeWidth="1"/>
+        <rect x="38" y="19" width="4" height="4" rx="1" fill="#FFE156" stroke="#1A1A2E" strokeWidth="1"/>
+        {/* Decorative Memphis dot */}
+        <circle cx="6" cy="24" r="1.2" fill="#FF6B9D" stroke="#1A1A2E" strokeWidth="0.7"/>
+        <circle cx="48" cy="24" r="1.2" fill="#00D4AA" stroke="#1A1A2E" strokeWidth="0.7"/>
       </svg>
 
+      {/* Terminal Logo */}
       <svg
-        width="19"
-        height="21"
+        width="55"
+        height="45"
         className="shape s8"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          transform="rotate(-40 6.25252 10.12626)"
-          x="7"
-          width="3"
-          height="25"
-          rx="1.5"
-          fill="#6C6CE5"
-          fillRule="evenodd"
-        />
+        <rect x="2" y="2" width="50" height="40" fill="#1A1A2E" stroke="#1A1A2E" strokeWidth="2" rx="4"/>
+        <rect x="2" y="2" width="50" height="10" fill="#FF6B9D" stroke="#1A1A2E" strokeWidth="2" rx="4"/>
+        <circle cx="10" cy="7" r="2" fill="#FF4757"/>
+        <circle cx="18" cy="7" r="2" fill="#FFE156"/>
+        <circle cx="26" cy="7" r="2" fill="#00D4AA"/>
+        <text x="10" y="32" fontSize="14" fontFamily="monospace" fontWeight="bold" fill="#00D4AA">&gt;_</text>
       </svg>
 
+      {/* Cloud Logo */}
       <svg
-        width="30"
-        height="25"
+        width="60"
+        height="40"
         className="shape s9"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M29.8564 16.0718c-2.85854 4.95114-8.1405 8.00057-13.85654 8.00024-5.71605-.00032-10.9981-3.04992-13.85641-8-2.8583-4.95007-2.8584-11.0491.00014-16.00024l2.77128 1.6c-2.28651 3.96036-2.28631 8.84002-.00011 12.8002 2.2862 3.96017 6.5124 6.40017 11.08513 6.4 4.57271-.00018 8.79872-2.43984 11.08524-6.4002l2.77128 1.6z"
-          fill="#6C6CE5"
-          fillRule="evenodd"
+          d="M15 32 Q3 32 3 22 Q3 12 15 12 Q17 4 30 4 Q44 4 46 14 Q56 14 56 24 Q56 32 44 32 Z"
+          fill="#4ECDC4"
+          stroke="#1A1A2E"
+          strokeWidth="3"
         />
+        <circle cx="22" cy="20" r="3" fill="#1A1A2E"/>
+        <circle cx="34" cy="20" r="3" fill="#1A1A2E"/>
+        <path d="M24 26 Q30 30 36 26" stroke="#1A1A2E" strokeWidth="2" fill="none"/>
       </svg>
 
+      {/* Laptop Logo */}
       <svg
-        width="47"
-        height="29"
+        width="60"
+        height="45"
         className="shape s10"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g fill="#44D7B6" fillRule="evenodd">
-          <path d="M46.78878 17.19094c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36265-9.0893-.26708-11.74616-4.27524-2.65686-4.00817-3.08917-9.78636-1.13381-15.15866l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12693 2.12514 3.20674 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40949 8.48988-8.70673l2.34923.85505z" />
-          <path d="M25.17585 9.32448c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36264-9.0893-.26708-11.74616-4.27525C.16049 11.92447-.27182 6.14628 1.68354.77398l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12692 2.12514 3.20675 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40948 8.48988-8.70672l2.34923.85505z" />
-        </g>
+        {/* Screen */}
+        <rect x="8" y="5" width="44" height="28" rx="2" fill="#1A1A2E" stroke="#1A1A2E" strokeWidth="2"/>
+        <rect x="11" y="8" width="38" height="22" fill="#9B59B6"/>
+        {/* Code lines on screen */}
+        <line x1="14" y1="13" x2="28" y2="13" stroke="#FFE156" strokeWidth="2"/>
+        <line x1="14" y1="18" x2="38" y2="18" stroke="#00D4AA" strokeWidth="2"/>
+        <line x1="14" y1="23" x2="32" y2="23" stroke="#FF6B9D" strokeWidth="2"/>
+        {/* Base */}
+        <path d="M3 35 L8 33 L52 33 L57 35 L57 38 Q57 40 55 40 L5 40 Q3 40 3 38 Z" fill="#C0C0C0" stroke="#1A1A2E" strokeWidth="2"/>
       </svg>
 
+      {/* Binary 1010 Logo */}
       <svg
-        width="33"
-        height="20"
+        width="55"
+        height="45"
         className="shape s11"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M32.36774.34317c.99276 5.63023-1.09332 11.3614-5.47227 15.03536-4.37895 3.67396-10.3855 4.73307-15.75693 2.77837C5.76711 16.2022 1.84665 11.53014.8539 5.8999l3.15139-.55567c.7941 4.50356 3.93083 8.24147 8.22772 9.8056 4.29688 1.56413 9.10275.71673 12.60554-2.2227C28.34133 9.98771 30.01045 5.4024 29.21635.89884l3.15139-.55567z"
-          fill="#FFD15C"
-          fillRule="evenodd"
-        />
+        <rect x="2" y="2" width="51" height="41" fill="#FFE156" stroke="#1A1A2E" strokeWidth="3"/>
+        <text x="8" y="18" fontSize="12" fontFamily="monospace" fontWeight="bold" fill="#1A1A2E">1010</text>
+        <text x="8" y="32" fontSize="12" fontFamily="monospace" fontWeight="bold" fill="#1A1A2E">0101</text>
+        <text x="8" y="42" fontSize="8" fontFamily="monospace" fill="#1A1A2E">1100</text>
       </svg>
     </div>
   );
