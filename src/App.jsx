@@ -3,11 +3,13 @@ import './App.css';
 import ThemeToggle from './components/themeToggle/ThemeToggle';
 import ClickSpark from './animations/ClickSpark';
 import { useTheme } from './context/theme';
+import UserInfo from './components/UserInfo';
 
 function App() {
 	const { isDarkMode } = useTheme();
 	return (
 		<>
+			<UserInfo />
 			<ThemeToggle />
 			<Sidebar />
 			<main className="main">

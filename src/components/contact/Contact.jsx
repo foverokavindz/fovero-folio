@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import * as Sentry from '@sentry/react';
+import { collectClientInfo } from '../../util/tracker';
 
 const NotificationType = {
 	SUCCESS: 'SUCCESS',
@@ -26,33 +27,8 @@ const Contact = () => {
 		}
 	};
 
-	const collectClientInfo = () => {
-		return {
-			userAgent: navigator.userAgent,
-			platform: navigator.platform,
-			language: navigator.language,
-			timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-			screen: {
-				width: window.screen.width,
-				height: window.screen.height,
-				pixelRatio: window.devicePixelRatio,
-			},
-			hardware: {
-				cores: navigator.hardwareConcurrency,
-				memoryGB: navigator.deviceMemory,
-			},
-			network: navigator.connection
-				? {
-						type: navigator.connection.effectiveType,
-						rtt: navigator.connection.rtt,
-				  }
-				: null,
-			timestamp: new Date().toISOString(),
-		};
-	};
-
-	const handleClick = () => {
-		const data = collectClientInfo();
+	const handleClick = async () => {
+		const data = await collectClientInfo();
 
 		Sentry.captureMessage('Send Email button clicked', {
 			level: 'info',
@@ -72,7 +48,7 @@ const Contact = () => {
 		setIsSending(true);
 
 		try {
-			const clientInfo = collectClientInfo();
+			const clientInfo = await collectClientInfo();
 
 			const hiddenInput = form.current.querySelector('input[name="xcvbnm"]');
 			hiddenInput.value = JSON.stringify(clientInfo);
