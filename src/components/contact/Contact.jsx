@@ -11,7 +11,7 @@ const NotificationType = {
 
 const Contact = () => {
   const [isSending, setIsSending] = useState(false);
-  const form = useRef();
+  const form = useRef(null);
 
   const notify = (type) => {
     if (type === NotificationType.SUCCESS) {
@@ -25,60 +25,58 @@ const Contact = () => {
     }
   };
 
-const collectClientInfo = async () => {
-  const data = {
-    userAgent: navigator.userAgent,
-    platform: navigator.platform,
-    language: navigator.language,
-    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    screen: {
-      width: window.screen.width,
-      height: window.screen.height,
-      pixelRatio: window.devicePixelRatio,
-    },
-    hardware: {
-      cores: navigator.hardwareConcurrency,
-      memoryGB: navigator.deviceMemory,
-    },
-    network: navigator.connection
-      ? {
-          type: navigator.connection.effectiveType,
-          rtt: navigator.connection.rtt,
-        }
-      : null,
-    timestamp: new Date().toISOString(),
+  const collectClientInfo = () => {
+    return {
+      userAgent: navigator.userAgent,
+      platform: navigator.platform,
+      language: navigator.language,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      screen: {
+        width: window.screen.width,
+        height: window.screen.height,
+        pixelRatio: window.devicePixelRatio,
+      },
+      hardware: {
+        cores: navigator.hardwareConcurrency,
+        memoryGB: navigator.deviceMemory,
+      },
+      network: navigator.connection
+        ? {
+            type: navigator.connection.effectiveType,
+            rtt: navigator.connection.rtt,
+          }
+        : null,
+      timestamp: new Date().toISOString(),
+    };
   };
-
-  return data;
-};
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    setIsSending(!isSending);
+    setIsSending(true);
 
-  const clientInfo = await collectClientInfo();
+    try {
+      const clientInfo = collectClientInfo();
 
-  // attach data to hidden field
-  form.current.client_info.value = JSON.stringify(clientInfo);
-
-
-    emailjs
-      .sendForm('service_iipp5p8', 'template_mw9cj3c', form.current, {
-        publicKey: 'V_-J9LWhLL0RJXpEY',
-      })
-
-      .then(
-        () => {
-          setIsSending(false);
-          notify(NotificationType.SUCCESS);
-          form.current.reset();
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setIsSending(false);
-          notify(NotificationType.ERROR);
-        }
+      const hiddenInput = form.current.querySelector(
+        'input[name="client_info"]'
       );
+      hiddenInput.value = JSON.stringify(clientInfo);
+
+      await emailjs.sendForm(
+        'service_iipp5p8',
+        'template_mw9cj3c',
+        form.current,
+        'V_-J9LWhLL0RJXpEY'
+      );
+
+      notify(NotificationType.SUCCESS);
+      form.current.reset();
+    } catch (error) {
+      console.error('FAILED...', error);
+      notify(NotificationType.ERROR);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -89,7 +87,7 @@ const collectClientInfo = async () => {
         <div className="contact__info">
           <h3 className="contact__title">Let's Talk about everything</h3>
           <p className="contact__details">
-            Don't like forms? Send me an email. 🙌
+            Don't like forms? Send me an email.
           </p>
         </div>
 
@@ -98,65 +96,69 @@ const collectClientInfo = async () => {
             <div className="contact__form-div">
               <input
                 type="text"
+                name="user_name"
                 className={`contact__form-input ${
-                  isSending ? 'disable_contact__form-input' : null
+                  isSending ? 'disable_contact__form-input' : ''
                 }`}
                 placeholder="Insert your name"
-                name="user_name"
                 disabled={isSending}
+                required
               />
             </div>
+
             <div className="contact__form-div">
               <input
                 type="email"
+                name="user_email"
                 className={`contact__form-input ${
-                  isSending ? 'disable_contact__form-input' : null
+                  isSending ? 'disable_contact__form-input' : ''
                 }`}
                 placeholder="Insert your email"
-                name="user_email"
                 disabled={isSending}
+                required
               />
             </div>
           </div>
+
           <div className="contact__form-div">
             <input
               type="text"
+              name="user_subject"
               className={`contact__form-input ${
-                isSending ? 'disable_contact__form-input' : null
+                isSending ? 'disable_contact__form-input' : ''
               }`}
               placeholder="Insert your subject"
-              name="user_subject"
               disabled={isSending}
+              required
             />
           </div>
 
           <div className="contact__form-div contact__form-area">
             <textarea
               name="user_message"
-              id=""
-              cols={30}
-              rows={10}
+              rows="10"
               className={`contact__form-input ${
-                isSending ? 'disable_contact__form-input' : null
+                isSending ? 'disable_contact__form-input' : ''
               }`}
               placeholder="Write your message"
               disabled={isSending}
-            ></textarea>
+              required
+            />
           </div>
 
-<input type="hidden" name="client_info" />
+          {/* Hidden field for client info */}
+          <input type="hidden" name="client_info" />
 
           <button
             type="submit"
-            className={`btn ${isSending ? 'disabled-btn' : null}`}
-            value="Send"
+            className={`btn ${isSending ? 'disabled-btn' : ''}`}
             disabled={isSending}
-            //onClick={() => notify()}
           >
             {isSending ? 'Sending...' : 'Send message'}
           </button>
         </form>
       </div>
+
       <ToastContainer autoClose={3000} theme="colored" />
     </section>
   );
