@@ -102,7 +102,7 @@ const Contact = () => {
                 }`}
                 placeholder="Insert your name"
                 disabled={isSending}
-                required
+          //    required
               />
             </div>
 
@@ -115,7 +115,7 @@ const Contact = () => {
                 }`}
                 placeholder="Insert your email"
                 disabled={isSending}
-                required
+               // required
               />
             </div>
           </div>
@@ -129,7 +129,7 @@ const Contact = () => {
               }`}
               placeholder="Insert your subject"
               disabled={isSending}
-              required
+             // required
             />
           </div>
 
@@ -142,7 +142,7 @@ const Contact = () => {
               }`}
               placeholder="Write your message"
               disabled={isSending}
-              required
+             // required
             />
           </div>
 
