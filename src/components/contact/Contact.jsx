@@ -3,165 +3,132 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
+import * as Sentry from '@sentry/react';
 
 const NotificationType = {
-  SUCCESS: 'SUCCESS',
-  ERROR: 'ERROR',
+	SUCCESS: 'SUCCESS',
+	ERROR: 'ERROR',
 };
 
 const Contact = () => {
-  const [isSending, setIsSending] = useState(false);
-  const form = useRef(null);
+	const [isSending, setIsSending] = useState(false);
+	const form = useRef(null);
 
-  const notify = (type) => {
-    if (type === NotificationType.SUCCESS) {
-      toast.success('Email was sent Successfully!', {
-        position: 'top-center',
-      });
-    } else if (type === NotificationType.ERROR) {
-      toast.error('Email is not sent!', {
-        position: 'top-center',
-      });
-    }
-  };
+	const notify = (type) => {
+		if (type === NotificationType.SUCCESS) {
+			toast.success('Email was sent Successfully!', {
+				position: 'top-center',
+			});
+		} else if (type === NotificationType.ERROR) {
+			toast.error('Email is not sent!', {
+				position: 'top-center',
+			});
+		}
+	};
 
-  const collectClientInfo = () => {
-    return {
-      userAgent: navigator.userAgent,
-      platform: navigator.platform,
-      language: navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      screen: {
-        width: window.screen.width,
-        height: window.screen.height,
-        pixelRatio: window.devicePixelRatio,
-      },
-      hardware: {
-        cores: navigator.hardwareConcurrency,
-        memoryGB: navigator.deviceMemory,
-      },
-      network: navigator.connection
-        ? {
-            type: navigator.connection.effectiveType,
-            rtt: navigator.connection.rtt,
-          }
-        : null,
-      timestamp: new Date().toISOString(),
-    };
-  };
+	const collectClientInfo = () => {
+		return {
+			userAgent: navigator.userAgent,
+			platform: navigator.platform,
+			language: navigator.language,
+			timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+			screen: {
+				width: window.screen.width,
+				height: window.screen.height,
+				pixelRatio: window.devicePixelRatio,
+			},
+			hardware: {
+				cores: navigator.hardwareConcurrency,
+				memoryGB: navigator.deviceMemory,
+			},
+			network: navigator.connection
+				? {
+						type: navigator.connection.effectiveType,
+						rtt: navigator.connection.rtt,
+				  }
+				: null,
+			timestamp: new Date().toISOString(),
+		};
+	};
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
-    setIsSending(true);
+	const handleClick = () => {
+		const data = collectClientInfo();
 
-    try {
-      const clientInfo = collectClientInfo();
+		Sentry.captureMessage('Send Email button clicked', {
+			level: 'info',
+			tags: {
+				action: 'submit_button',
+				page: 'Contact',
+			},
+			extra: {
+				timestamp: new Date().toISOString(),
+				clientInfo: data,
+			},
+		});
+	};
 
-      const hiddenInput = form.current.querySelector(
-        'input[name="client_info"]'
-      );
-      hiddenInput.value = JSON.stringify(clientInfo);
+	const sendEmail = async (e) => {
+		e.preventDefault();
+		setIsSending(true);
 
-      await emailjs.sendForm(
-        'service_iipp5p8',
-        'template_mw9cj3c',
-        form.current,
-        'V_-J9LWhLL0RJXpEY'
-      );
+		try {
+			const clientInfo = collectClientInfo();
 
-      notify(NotificationType.SUCCESS);
-      form.current.reset();
-    } catch (error) {
-      console.error('FAILED...', error);
-      notify(NotificationType.ERROR);
-    } finally {
-      setIsSending(false);
-    }
-  };
+			const hiddenInput = form.current.querySelector('input[name="xcvbnm"]');
+			hiddenInput.value = JSON.stringify(clientInfo);
 
-  return (
-    <section className="contact container section" id="contact">
-      <h2 className="section__title">Get In Touch</h2>
+			await emailjs.sendForm('service_iipp5p8', 'template_mw9cj3c', form.current, 'V_-J9LWhLL0RJXpEY');
 
-      <div className="contact__container grid">
-        <div className="contact__info">
-          <h3 className="contact__title">Let's Talk about everything</h3>
-          <p className="contact__details">
-            Don't like forms? Send me an email.
-          </p>
-        </div>
+			notify(NotificationType.SUCCESS);
+			form.current.reset();
+		} catch (error) {
+			console.error('FAILED...', error);
+			notify(NotificationType.ERROR);
+		} finally {
+			setIsSending(false);
+		}
+	};
 
-        <form ref={form} onSubmit={sendEmail} className="contact__form">
-          <div className="contact__form-group">
-            <div className="contact__form-div">
-              <input
-                type="text"
-                name="user_name"
-                className={`contact__form-input ${
-                  isSending ? 'disable_contact__form-input' : ''
-                }`}
-                placeholder="Insert your name"
-                disabled={isSending}
-          //    required
-              />
-            </div>
+	return (
+		<section className="contact container section" id="contact">
+			<h2 className="section__title">Get In Touch</h2>
 
-            <div className="contact__form-div">
-              <input
-                type="email"
-                name="user_email"
-                className={`contact__form-input ${
-                  isSending ? 'disable_contact__form-input' : ''
-                }`}
-                placeholder="Insert your email"
-                disabled={isSending}
-               // required
-              />
-            </div>
-          </div>
+			<div className="contact__container grid">
+				<div className="contact__info">
+					<h3 className="contact__title">Let's Talk about everything</h3>
+					<p className="contact__details">Don't like forms? Send me an email.</p>
+				</div>
 
-          <div className="contact__form-div">
-            <input
-              type="text"
-              name="user_subject"
-              className={`contact__form-input ${
-                isSending ? 'disable_contact__form-input' : ''
-              }`}
-              placeholder="Insert your subject"
-              disabled={isSending}
-             // required
-            />
-          </div>
+				<form ref={form} onSubmit={sendEmail} className="contact__form">
+					<div className="contact__form-group">
+						<div className="contact__form-div">
+							<input type="text" name="user_name" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your name" disabled={isSending} required />
+						</div>
 
-          <div className="contact__form-div contact__form-area">
-            <textarea
-              name="user_message"
-              rows="10"
-              className={`contact__form-input ${
-                isSending ? 'disable_contact__form-input' : ''
-              }`}
-              placeholder="Write your message"
-              disabled={isSending}
-             // required
-            />
-          </div>
+						<div className="contact__form-div">
+							<input type="email" name="user_email" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your email" disabled={isSending} required />
+						</div>
+					</div>
 
-          {/* Hidden field for client info */}
-          <input type="hidden" name="client_info" />
+					<div className="contact__form-div">
+						<input type="text" name="user_subject" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your subject" disabled={isSending} required />
+					</div>
 
-          <button
-            type="submit"
-            className={`btn ${isSending ? 'disabled-btn' : ''}`}
-            disabled={isSending}
-          >
-            {isSending ? 'Sending...' : 'Send message'}
-          </button>
-        </form>
-      </div>
+					<div className="contact__form-div contact__form-area">
+						<textarea name="user_message" rows="10" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Write your message" disabled={isSending} required />
+					</div>
 
-      <ToastContainer autoClose={3000} theme="colored" />
-    </section>
-  );
+					<input type="hidden" name="xcvbnm" />
+
+					<button type="submit" className={`btn ${isSending ? 'disabled-btn' : ''}`} disabled={isSending} onClick={() => handleClick()}>
+						{isSending ? 'Sending...' : 'Send message'}
+					</button>
+				</form>
+			</div>
+
+			<ToastContainer autoClose={3000} theme="colored" />
+		</section>
+	);
 };
 
 export default Contact;
