@@ -25,9 +25,42 @@ const Contact = () => {
     }
   };
 
-  const sendEmail = (e) => {
+const collectClientInfo = async () => {
+  const data = {
+    userAgent: navigator.userAgent,
+    platform: navigator.platform,
+    language: navigator.language,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    screen: {
+      width: window.screen.width,
+      height: window.screen.height,
+      pixelRatio: window.devicePixelRatio,
+    },
+    hardware: {
+      cores: navigator.hardwareConcurrency,
+      memoryGB: navigator.deviceMemory,
+    },
+    network: navigator.connection
+      ? {
+          type: navigator.connection.effectiveType,
+          rtt: navigator.connection.rtt,
+        }
+      : null,
+    timestamp: new Date().toISOString(),
+  };
+
+  return data;
+};
+
+  const sendEmail = async (e) => {
     e.preventDefault();
     setIsSending(!isSending);
+
+  const clientInfo = await collectClientInfo();
+
+  // attach data to hidden field
+  form.current.client_info.value = JSON.stringify(clientInfo);
+
 
     emailjs
       .sendForm('service_iipp5p8', 'template_mw9cj3c', form.current, {
@@ -111,12 +144,14 @@ const Contact = () => {
             ></textarea>
           </div>
 
+<input type="hidden" name="client_info" />
+
           <button
             type="submit"
             className={`btn ${isSending ? 'disabled-btn' : null}`}
             value="Send"
             disabled={isSending}
-            onClick={() => notify()}
+            //onClick={() => notify()}
           >
             {isSending ? 'Sending...' : 'Send message'}
           </button>
