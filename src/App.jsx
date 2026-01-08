@@ -4,6 +4,7 @@ import ThemeToggle from './components/themeToggle/ThemeToggle';
 import ClickSpark from './animations/ClickSpark';
 import { useTheme } from './context/theme';
 import UserInfo from './components/UserInfo';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
 	const { isDarkMode } = useTheme();
@@ -28,6 +29,7 @@ function App() {
 					</>
 				</ClickSpark>
 			</main>
+			<Analytics />
 		</>
 	);
 }

@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@sentry/react": "^10.32.1",
+    "@vercel/analytics": "^1.6.1",
     "gsap": "^3.14.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
